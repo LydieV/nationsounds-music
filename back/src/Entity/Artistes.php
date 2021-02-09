@@ -6,6 +6,8 @@ use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use App\Repository\ArtistesRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
@@ -46,6 +48,16 @@ class Artistes
      */
     private $style;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Evenement::class, mappedBy="artistes")
+     */
+    private $evenements;
+
+    public function __construct()
+    {
+        $this->evenements = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,6 +83,33 @@ class Artistes
     public function setStyle(string $style): self
     {
         $this->style = $style;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Evenement[]
+     */
+    public function getEvenements(): Collection
+    {
+        return $this->evenements;
+    }
+
+    public function addEvenement(Evenement $evenement): self
+    {
+        if (!$this->evenements->contains($evenement)) {
+            $this->evenements[] = $evenement;
+            $evenement->addArtiste($this);
+        }
+
+        return $this;
+    }
+
+    public function removeEvenement(Evenement $evenement): self
+    {
+        if ($this->evenements->removeElement($evenement)) {
+            $evenement->removeArtiste($this);
+        }
 
         return $this;
     }
