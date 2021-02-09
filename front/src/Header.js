@@ -4,7 +4,7 @@ import Menu from './Menu';
 export default function Header()  {
     return (
         <div className={"header"}>
-            <p> Hearder </p>
+            <p> Header </p>
             <Menu></Menu>
         </div>
     );
