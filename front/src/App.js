@@ -1,12 +1,20 @@
 import './App.css';
-import Artistes from './Artistes';
+
+import React from "react";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+
+import Home from './Home';
 
 function App() {
   return (
-    <div>
-      
-      <Artistes></Artistes>
-    </div>
+      <BrowserRouter>
+        <div>
+          <Switch>
+            <Route exact={true} path="/" component={Home} />
+            
+          </Switch>
+        </div>
+      </BrowserRouter>
   );
 }
 

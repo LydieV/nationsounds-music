@@ -1,16 +1,12 @@
 import React from "react";
+import Menu from './Menu';
 
 export default function Header()  {
     return (
-        <BrowserRouter>
-            <div className={"header"}>
-                <nav>
-                    <Link to={'/home'}> Accueil</Link>
-                </nav>
-            </div>
-            <Route path="/home" component={Home}/>
-        </BrowserRouter>
-
+        <div className={"header"}>
+            <p> Hearder </p>
+            <Menu></Menu>
+        </div>
     );
 
 }

@@ -1,17 +1,11 @@
 import React from "react";
-import {BrowserRouter, Link, Route, Router} from "react-router-dom";
-import Home from "./Home";
+import {Link} from "react-router-dom";
 
 export default function Menu()  {
     return (
-        <BrowserRouter>
-            <div className={"header"}>
-                <nav>
-                    <Link to={'/home'}> Accueil</Link>
-                </nav>
-            </div>
-            <Route path="/home" component={Home}/>
-        </BrowserRouter>
+        <nav>
+            <Link to={'/'}> Accueil </Link>
+        </nav>
 
     );
 
