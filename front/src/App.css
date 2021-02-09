@@ -42,3 +42,18 @@ body{
   box-shadow: 0 0.3em 0.3em var(--lightGrey);
   margin-bottom: 5vh;
 }
+
+/*-----------------------
+-------------------------
+        Menu
+-------------------------
+-----------------------*/
+.navBarre{
+  display: flex;
+  flex-direction: column;
+}
+
+.navBarre a{
+  color: var(--black);
+  text-decoration: none;
+}
