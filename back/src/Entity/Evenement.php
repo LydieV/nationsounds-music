@@ -2,13 +2,25 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use App\Repository\EvenementRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=EvenementRepository::class)
+ * 
+ * @ApiResource(
+ *     collectionOperations={"get"={"normalization_context"={"groups"="evenement:list"}}},
+ *     itemOperations={"get"={"normalization_context"={"groups"="evenement:item"}}},
+ *     paginationEnabled=false
+ * )
+ * 
+ * @ApiFilter(SearchFilter::class, properties={"evenement": "exact"})
  */
 class Evenement
 {
@@ -16,41 +28,57 @@ class Evenement
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * 
+     * @Groups({"evenement:list", "evenement:item"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
+     * @Groups({"evenement:list", "evenement:item"})
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
+     * @Groups({"evenement:list", "evenement:item"})
      */
     private $type;
 
     /**
      * @ORM\ManyToMany(targetEntity=Artistes::class, inversedBy="evenements")
+     * 
+     * @Groups({"evenement:list", "evenement:item"})
      */
     private $artistes;
 
     /**
      * @ORM\Column(type="datetime")
+     * 
+     * @Groups({"evenement:list", "evenement:item"})
      */
     private $date;
 
     /**
      * @ORM\Column(type="time")
+     * 
+     * @Groups({"evenement:list", "evenement:item"})
      */
     private $horaireDebut;
 
     /**
      * @ORM\Column(type="time")
+     * 
+     * @Groups({"evenement:list", "evenement:item"})
      */
     private $horaireFin;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * 
+     * @Groups({"evenement:list", "evenement:item"})
      */
     private $description;
 
