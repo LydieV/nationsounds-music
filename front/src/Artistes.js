@@ -21,7 +21,7 @@ const Artistes = () => {
             
             {artisteDatas.map(artisteData =>
             <div>
-               <p> Son nom :  {artisteData.Name} </p> 
+               <p> Son nom :  {artisteData.name} </p> 
                <p> Son style :  {artisteData.style} </p> 
                <br/>
             </div>
