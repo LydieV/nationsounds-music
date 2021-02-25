@@ -12,3 +12,5 @@
 => composer require doctrine
 => composer require orm-fixtures
 => composer require api
+
+Copier / coller .env => .env.local et mettre à jour avec bonne BDD.
