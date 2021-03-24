@@ -24,9 +24,17 @@
   box-sizing: border-box;
 }
 
+@font-face{
+  font-family: "Luciole";
+  src: url("fonts/luciole/Luciole-Regular.ttf");
+}
+
 body{
   background-color: var(--cloud);
+  font-family: "Luciole";
 }
+
+
 
 /*-----------------------
 -------------------------
@@ -151,8 +159,106 @@ body{
        Lydie
 -------------------------
 -----------------------*/
+/*programme*/
+.blockSwitchProgramme{
+  margin-left: 2.4vw;
+  margin-right: 2.4vw;
+}
+
+.blockSwitchProgramme .tab-list{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.blockSwitchProgramme .tab-item{
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.blockSwitchProgramme .tab-item::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -1vh;
+  border-bottom: 3px solid #EFE1FB;
+  left: 0;
+  border-radius: 0.5rem;
+}
+
+.blockSwitchProgramme .active::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -1vh;
+  border-bottom: 3px solid var(--magenta);
+  left: 0;
+  border-radius: 0.5rem;
+}
 
 
+
+.cardsProgramme{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 4vh;
+}
+
+.cardProgramme{
+  width: 10rem;
+  height: 9rem;
+  border-radius: 1.5rem;
+  position: relative;
+  margin-bottom: 2.2vh;
+}
+
+.cardProgramme .imgCard{
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.cardProgramme img{
+  border-radius: 1.5rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cardProgramme .contenuCard{
+  position: absolute;
+  z-index: 2;
+  color: var(--white);
+  padding: 0.7rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1.5rem;
+}
+
+.cardProgramme .contenuCard .horaireCard{
+  text-align: right;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+
+}
+
+.cardProgramme .contenuCard .nomCard{
+  width: 80%;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  line-height: 115%;
+  font-weight: 600;
+}
 
 
 
