@@ -865,9 +865,51 @@ body{
         Télio
 -------------------------
 -----------------------*/
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2vh;
 
 
+}
 
+.card-partenaire {
+  width: 140px;
+  height: 174px;
+
+  padding: 18px 20px;
+  margin: 17px 0px;
+  background: var(--pink);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.img-partenaire {
+  width: 100px;
+  height: 100px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-bottom: 14px;
+}
+
+.text-partenaire  {
+  width: 100px;
+  height: 24px;
+
+  font-family: Luciole;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: var(--black);
+}
 
 
 
