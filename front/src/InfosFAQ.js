@@ -1,10 +1,46 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Header from "./Header";
+import Tabs from "./Tabs";
+import Faq from "./Faq";
+import Info from "./Info";
 
-export default function InfosFAQ(){
-    return(
+const InfosFAQ = () => {
+    let [infosfaqDatas, setInfosFAQDatas] = useState([]);
+    useEffect(() => {
+        axios
+            .get('https://localhost:8000/api/faqs')
+            .then(datas => {
+                setInfosFAQDatas(datas.data["hydra:member"])
+            })
+    }, []);
+
+
+    return (
         <div>
-            <p> Page Infos + FAQ </p>
-        </div>
+            <Header></Header>
+            <p className={"faq"}> c'est pour le margin </p>
 
-    );
+            {/*JSON.stringify(infosfaqDatas)*/}
+            <div className={"blockSwitchProgramme"}>
+
+
+
+            <Tabs>
+                <div title="Foire aux Questions" > 
+                    <Faq></Faq>
+                </div>
+
+                <div title="Informations">
+                    <Info></Info>
+                </div>
+            </Tabs>
+            
+            </div>
+        </div>
+    )
 }
+
+
+export default InfosFAQ;
