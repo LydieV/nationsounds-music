@@ -1,10 +1,55 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Header from "./Header";
+import Tabs from "./Tabs";
 
-export default function InfosFAQ(){
-    return(
+const InfosFAQ = () => {
+    let [infosfaqDatas, setInfosFAQDatas] = useState([])
+    useEffect(() => {
+        axios
+            .get('https://localhost:8000/api/faqs')
+            .then(datas => {
+                setInfosFAQDatas(datas.data["hydra:member"])
+            })
+    }, [])
+
+
+    return (
         <div>
-            <p> Page Infos + FAQ </p>
-        </div>
+            <Header></Header>
+            <p className={"faq"}> Liste faq 2 </p>
+   
+            {/*JSON.stringify(infosfaqDatas)*/}
+            <div className={"blockSwitchProgramme"}>
+            {infosfaqDatas.map(infosfaqData =>
 
-    );
+            <Tabs>
+                
+            <div title="Foire aux Questions" > 
+
+                <div className={"card-faq"}>
+                    <h3>{infosfaqData.question}</h3>
+                    <p>{infosfaqData.reponse}</p> 
+                </div>
+
+                <div className={"card-faq"}>
+                    <h3>{infosfaqData.question}</h3>
+                    <p>{infosfaqData.reponse}</p> 
+                </div>
+
+            </div>
+
+            <div title="Informations">
+                <p>Informations générales</p>
+                <p>Affichage des notifications</p>
+            </div>
+            </Tabs>
+            )}
+</div>
+        </div>
+    )
 }
+
+
+export default InfosFAQ;
