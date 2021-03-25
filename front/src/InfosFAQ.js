@@ -22,31 +22,25 @@ const InfosFAQ = () => {
    
             {/*JSON.stringify(infosfaqDatas)*/}
             <div className={"blockSwitchProgramme"}>
-            {infosfaqDatas.map(infosfaqData =>
+            
 
             <Tabs>
-                
-            <div title="Foire aux Questions" > 
-
-                <div className={"card-faq"}>
-                    <h3>{infosfaqData.question}</h3>
-                    <p>{infosfaqData.reponse}</p> 
+                <div title="Foire aux Questions" > 
+                {infosfaqDatas.map(infosfaqData =>
+                    <div className={"card-faq"}>
+                        <h3>{infosfaqData.question}</h3>
+                        <p>{infosfaqData.reponse}</p> 
+                    </div>
+                )}
                 </div>
 
-                <div className={"card-faq"}>
-                    <h3>{infosfaqData.question}</h3>
-                    <p>{infosfaqData.reponse}</p> 
+                <div title="Informations">
+                    <p>Informations générales</p>
+                    <p>Affichage des notifications</p>
                 </div>
-
-            </div>
-
-            <div title="Informations">
-                <p>Informations générales</p>
-                <p>Affichage des notifications</p>
-            </div>
             </Tabs>
-            )}
-</div>
+            
+            </div>
         </div>
     )
 }

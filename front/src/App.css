@@ -1054,6 +1054,7 @@ bottom: 32.35%;
   order: 0;
   flex-grow: 0;
   margin-bottom: 14px;
+  object-fit: cover;
 }
 
 .text-partenaire  {
