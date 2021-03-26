@@ -1118,3 +1118,279 @@ bottom: 32.35%;
   color: var(--pink);
 }
 
+/*-----------------------
+    Contact
+-----------------------*/
+
+.contact-form {
+  margin: 35px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2vh;
+  margin-bottom: 40px;
+}
+.contact-form h1 {
+  margin-bottom: 18px;
+}
+
+.contact-form input {
+  font-family: Luciole;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 175%;
+  letter-spacing: 0.2px;
+  color: var(--grey);
+  background-color: var(--white);
+  padding: 10px 20px;
+  width: 327px;
+  height: 38px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+.contact-form textarea {
+  font-family: Luciole;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 175%;
+  letter-spacing: 0.2px;
+  color: var(--grey);
+  background-color: var(--white);
+  padding: 10px 20px;
+  width: 327px;
+  height: 100px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.contact-form button {
+  font-family: Luciole;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--white);
+  width: 140px;
+  height: 44px;
+  padding: 10px 35px;
+  background: linear-gradient(146deg, #AD00FF 0%, #7700CA 72.03%);
+  box-shadow: 10.0282px 14.8674px 35.8667px rgba(30, 0, 51, 0.3205), inset -3.63243px -5.38531px 6.49585px #6F00BD, inset 3.63243px 5.38531px 6.49585px #B500FF;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+
+hr {
+  width: 188px;
+  height: 3px;
+  background: var(--magenta);
+  border-radius: 5px;
+  border: none;
+  margin: 35px auto;
+}
+
+.contact-rs {
+  text-align: center;
+}
+.contact-rs p {
+  margin-bottom: 15px;
+}
+.contact-mail {
+  text-align: center;
+}
+.contact-mail p {
+  margin-bottom: 15px;
+}
+.contact-mail a {
+  color: var(--lightBlue);
+  margin-bottom: 15px;
+}
+/*-----------------------
+    S'inscrire
+-----------------------*/
+.register-option {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+.Facebook-button {
+  font-family: Luciole;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.2px;
+  background: #3B5998;
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 140px;
+  height: 44px;
+  padding: 10px 35px;
+  margin: 15px 24px 15px 12px;
+}
+
+
+.Google-button {
+  font-family: Luciole;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.2px;
+  background: #EB4132;
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 140px;
+  height: 44px;
+  padding: 10px 35px;
+  margin: 15px 12px 15px 24px;
+}
+
+.register-form {
+  margin: 35px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2vh;
+  margin-bottom: 40px;
+}
+
+.register-form input {
+  font-family: Luciole;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 175%;
+  letter-spacing: 0.2px;
+  color: var(--grey);
+  background-color: var(--white);
+  padding: 10px 20px;
+  width: 327px;
+  height: 38px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+.register-form p {
+  font-size: 10px;
+  margin-left: 20px;
+  color: var(--darkGrey);
+  margin-bottom: 15px;
+}
+.register-form button {
+  font-family: Luciole;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--white);
+  width: 140px;
+  height: 44px;
+  padding: 10px 35px;
+  background: linear-gradient(146deg, #AD00FF 0%, #7700CA 72.03%);
+  box-shadow: 10.0282px 14.8674px 35.8667px rgba(30, 0, 51, 0.3205), inset -3.63243px -5.38531px 6.49585px #6F00BD, inset 3.63243px 5.38531px 6.49585px #B500FF;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+/*-----------------------
+    Login
+-----------------------*/
+
+.login-form {
+  margin: 35px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+.login-form h1 {
+  margin-bottom: 18px;
+}
+
+.login-form input {
+  font-family: Luciole;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 175%;
+  letter-spacing: 0.2px;
+  color: var(--grey);
+  background-color: var(--white);
+  padding: 10px 20px;
+  width: 327px;
+  height: 38px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.login-form button {
+  font-family: Luciole;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--white);
+  width: 180px;
+  height: 44px;
+  padding: 10px 35px;
+  background: linear-gradient(146deg, #AD00FF 0%, #7700CA 72.03%);
+  box-shadow: 10.0282px 14.8674px 35.8667px rgba(30, 0, 51, 0.3205), inset -3.63243px -5.38531px 6.49585px #6F00BD, inset 3.63243px 5.38531px 6.49585px #B500FF;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+
+.login-option {
+  margin: 35px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+.login-option p {
+  font-size: 12px;
+}
+.login-option a {
+  font-family: Luciole;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--magenta);
+  width: 205px;
+  height: 44px;
+  padding: 10px 35px;
+  background:none;
+  border-radius: 8px;
+  border: 2px solid var(--magenta);;
+  margin: 10px;
+}
+
+/*-----------------------
+    Login
+-----------------------*/
+.mention-legales {
+  margin: 35px 24px;
+}
+.mention-legales div {
+  margin-bottom: 35px;
+}
+.mention-legales div h2 {
+  margin-bottom: 20px;
+}
+.mention-legales div p {
+  font-family: Luciole;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  margin-bottom: 15px;
+}
