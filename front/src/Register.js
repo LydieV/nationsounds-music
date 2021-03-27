@@ -12,16 +12,16 @@ export default function Register(){
                 <button className={"Facebook-button"}>Facebook</button>
             </div>
             <hr></hr>
-            <div className={"register-form"}>
+            <form action="#" className={"register-form"}>
                 <h2>Inscription</h2>
                 <input type="text" name="nom" placeholder="Votre nom"></input>
                 <input type="text" name="prenom" placeholder="Votre prénom"></input>
                 <input type="email" name="email" placeholder="Votre adresse mail"></input>
                 <input type="password" name="password" placeholder="Votre mot de passe"></input>
-                <input type="password" name="password" placeholder="Confirmé votre mot de passe"></input>
-                <p>En cliquant sur s’inscrire vous accepter notre politique de gestion des données.</p>
+                <input type="password" name="password" placeholder="Confirmez votre mot de passe"></input>
+                <p>En cliquant sur s’inscrire, vous acceptez notre politique de gestion des données.</p>
                 <button>S'inscrire</button>
-            </div>
+            </form>
         </div>
 
     );

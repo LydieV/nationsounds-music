@@ -159,6 +159,15 @@ body{
        Lydie
 -------------------------
 -----------------------*/
+
+.deconnexion {
+  background-image:url('https://image.freepik.com/icones-gratuites/deconnexion_318-10026.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width:20vw;
+  height:6vh;
+}
 /*programme*/
 .blockSwitchProgramme{
   margin-left: 2.4vw;
