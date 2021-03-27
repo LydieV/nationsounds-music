@@ -1463,3 +1463,40 @@ hr {
   border: 2px solid var(--magenta);;
   margin: 50px 25px 50px;
   }
+
+/*-----------------------
+    Notif
+-----------------------*/
+
+ .card-notif {
+   margin: 11px;
+   width: 343px;
+   height: 38px;
+   background-color: var(--lightGrey);
+   padding: 8px;
+   border-radius: 15px;
+   display: flex;
+   justify-content: space-between;
+   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+ }
+
+ .card-notif p {
+  font-family: Luciole;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 175%;
+  float: left;
+}
+.card-notif p::before {
+  content: "⚠ ";
+  margin-right: 5px;
+  font-size: 20px;
+  color: var(--black);
+  float: left;
+}
+.card-notif a {
+  text-decoration: none;
+  color: var(--black);
+  float: right;
+}
