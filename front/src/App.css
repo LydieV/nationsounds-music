@@ -1394,3 +1394,63 @@ hr {
   line-height: 140%;
   margin-bottom: 15px;
 }
+
+/*-----------------------
+    Profil
+-----------------------*/
+
+.profil-info {
+  margin: 35px 24px;
+}
+.profil-info input {
+  font-family: Luciole;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 175%;
+  letter-spacing: 0.2px;
+  color: var(--grey);
+  background-color: var(--white);
+  padding: 10px 20px;
+  width: 327px;
+  height: 38px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.profil-info button {
+  font-family: Luciole;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--magenta);
+  width: 275px;
+  height: 44px;
+  padding: 10px 35px;
+  background:none;
+  border-radius: 8px;
+  border: 2px solid var(--magenta);;
+  margin: 20px 25px 30px;
+  }
+
+
+.billet-info {
+  margin: 35px 24px;
+}
+
+.billet-info button {
+  font-family: Luciole;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--magenta);
+  width: 275px;
+  height: 44px;
+  padding: 10px 35px;
+  background:none;
+  border-radius: 8px;
+  border: 2px solid var(--magenta);;
+  margin: 50px 25px 50px;
+  }
