@@ -6,28 +6,6 @@ import axios from "axios";
 import {useCookies, withCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
 
-/*
-export default function Login(){
-    return(
-        <div>
-            <Header></Header>
-            <p className={"faq"}> c'est pour le margin </p>
-            <div className={"login-form"}>
-            <h1>Connexion</h1>
-                <input type="email" name="email" placeholder="Votre adresse mail"></input>
-                <input type="password" name="password" placeholder="Votre mot de passe"></input>
-                <button>Se connecter</button>
-            </div>
-            <hr></hr>
-            <div className={"login-option"}>
-                <p>Pas encore inscrit ?</p>
-                <a href="/register">Créer un compte</a>
-            </div>
-        </div>
-
-    );
-}*/
-
 function FormLogin(props){
     return(
         <div>
@@ -63,7 +41,7 @@ function Login(){
             password: passwordRef.current.value
         };
         try {
-            const p = (await axios.post('https://localhost:8000/signup', user));
+            const p = (await axios.post('https://localhost:8000/register', user));
             if (p.status === 200) {
                 user.token = p.data.token;
                 setCookie('login', user, '/');
@@ -100,12 +78,12 @@ function Login(){
 }
 
 function LocalProtectedRoute({component: Component, ...rest}) {
-    if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.username && rest.allCookies.login.token) {
+    if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.email && rest.allCookies.login.token) {
         return (
             <Route
                 {...rest}
                 render={routeProps => (
-                    <Component {...routeProps} username={rest.allCookies.login.username}
+                    <Component {...routeProps} email={rest.allCookies.login.email}
                                token={rest.allCookies.login.token}/>
                 )}
             />
@@ -115,7 +93,7 @@ function LocalProtectedRoute({component: Component, ...rest}) {
 }
 
 function LocalProtectedLink({...rest}) {
-    if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.username && rest.allCookies.login.token) {
+    if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.email && rest.allCookies.login.token) {
         return <Link className={rest.className} to={rest.to}>cities</Link>
     }else{
         return null;
