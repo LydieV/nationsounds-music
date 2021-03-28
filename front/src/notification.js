@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default function Info()  {
     let [infoDatas, setInfoDatas] = useState([]);
+    let monInfo = [];
     useEffect(() => {
         axios
             .get('https://localhost:8000/api/infos')
@@ -13,6 +14,14 @@ export default function Info()  {
     }, []);
 
 
+    /*boucle for avec i < 2
+    let taille = infoDatas.length;
+    if(infoDatas.type === "general"){
+        monInfo.push(infoDatas[taille])
+    }
+        deuxieme boucle for mais avec l'autre type d'info
+        
+    */
         return (
             <div>   
                 {infoDatas.map(infoData =>
