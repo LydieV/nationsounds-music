@@ -30,7 +30,7 @@ class Artistes
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      * 
-     * @Groups({"artistes"})
+     * @Groups({"artistes:list", "artistes:item"})
      */
     private $id;
 
@@ -50,8 +50,6 @@ class Artistes
 
     /**
      * @ORM\ManyToMany(targetEntity=Evenement::class, mappedBy="artistes")
-     * 
-     * @Groups("evenement")
      */
     private $evenements;
 

@@ -9,7 +9,9 @@ function Home() {
         
         <div>
             <Header></Header>
-       
+            <p> Page accueil </p>
+            <Artistes></Artistes>
+            <Footer></Footer>
             
         </div>
     )

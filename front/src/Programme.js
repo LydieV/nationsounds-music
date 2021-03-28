@@ -4,27 +4,61 @@ import Header from "./Header";
 import Tabs from "./Tabs";
 
 const Programme = () => {
-    let [programmeDatas, setProgrammeDatas] = useState([]);
-    useEffect(() => {
+    let [evenementDatas, setEvenementDatas] = useState([]);
+    let [artistesDatas, setArtistesDatas] = useState([]);
+
+    setArtistesDatas = [];
+
+ /*   useEffect(() => {
         axios
         .get('https://localhost:8000/api/evenements')
         .then(datas => {
-            setProgrammeDatas(datas.data["hydra:member"])
+            setEvenementDatas(datas.data["hydra:member"])
+            evenementDatas.map(evenementData =>
+                getArtistes(evenementData.artistes)
+                )
         })
+    }, []);*/
+
+    async function getEvenement(){
+        await axios.get('https://localhost:8000/api/evenements')
+        .then(datas => {
+            setEvenementDatas(datas.data["hydra:member"])
+            evenementDatas.map(evenementData =>
+                getArtistes(evenementData.artistes)
+                )})
+    }
+
+    async function getArtistes(madata){
+        await axios
+        .get('https://localhost:8000'+madata)
+        .then(datas => {
+            artistesDatas.push(datas.data)
+            getProgramme()
+        })
+    }
+
+    async function getProgramme(){
+        for(let i =0; i < evenementDatas.length; i++){
+            for(let j=0; j < artistesDatas.length; j++){
+               let urlartiste = "/api/artistes/"+artistesDatas[j].id;
+                if(evenementDatas[i].artistes === urlartiste){
+                    evenementDatas[i].artistes.push({"id" : artistesDatas[j].id, 'name' : artistesDatas[j].name,'style' : artistesDatas[j].style});
+                  console.log(evenementDatas);
+                }
+            }
+        }
+    }
+
+    useEffect(() => {
+        getEvenement();
     }, []);
 
     return(
         <div>
             <Header></Header>
             <div className={"blockSwitchProgramme"}>
-                {programmeDatas.map(programmeData =>
-                    <div>
-                        <p>{programmeData.type}</p>
-                        <p>{programmeData.horaireDebut}</p>
-                        <p>{programmeData.artistes}</p>
-                        
-                    </div>
-                    )}
+                
                 <Tabs>
                     <div title="Concerts">
                         <div class="cardsProgramme">
@@ -68,6 +102,27 @@ const Programme = () => {
                         </div>
                     </div>
                 </Tabs>
+
+                {JSON.stringify(artistesDatas)}
+                {artistesDatas.map(artistesData =>
+                    <div>
+                        <p>{artistesData.name}</p>
+                        <p>{artistesData.id}</p>
+                    </div>
+                    )}
+                <br/>
+                <br/>
+                {evenementDatas.map(evenementData =>
+                    <div>
+                        <p>{evenementData.type}</p>
+                        <p>{evenementData.horaireDebut}</p>                        
+                        <p>{evenementData.artistes}</p>
+                        <p>{evenementData.artistes.name}</p>
+                        
+                    </div>
+                    )}
+
+                    {JSON.stringify(evenementDatas)}
             </div>
         </div>
 
