@@ -5,6 +5,7 @@ import Header from "./Header";
 import Tabs from "./Tabs";
 import Faq from "./Faq";
 import Info from "./Info";
+import Notification from "./notification";
 
 const InfosFAQ = () => {
     let [infosfaqDatas, setInfosFAQDatas] = useState([]);
@@ -36,7 +37,8 @@ const InfosFAQ = () => {
                     <Info></Info>
                 </div>
             </Tabs>
-            
+            <p className={"faq"}> c'est pour le margin </p>
+            <Notification></Notification>
             </div>
         </div>
     )

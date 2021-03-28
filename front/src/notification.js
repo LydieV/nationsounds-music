@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import InfosFAQ from "./InfosFAQ";
 
 export default function Info()  {
     let [infoDatas, setInfoDatas] = useState([]);
@@ -14,21 +15,16 @@ export default function Info()  {
 
 
     return (
-        <div>
-            <div className={"dot-info"}>
-                <p>Informations importantes</p>
-                <p>Informations générales</p>
-            </div>
-            
+        <div>   
             {infoDatas.map(infoData =>
                 <div>
 
 
-
-                    <div className={"card-info"}>
-                        <h3>{infoData.titre}</h3>
-                        <p>{infoData.description}</p> 
+                    <div className={"card-notif"}>
+                        <p key={infoData.id=1}> {infoData.titre}</p>
+                        <a href={"./infosFAQ"}> > </a>
                     </div>
+
 
                 </div>
             )}
