@@ -22,8 +22,16 @@ export default function Info()  {
         deuxieme boucle for mais avec l'autre type d'info
         
     */
-        return (
-            <div>   
+   
+    for (let i=1; i < 2; i++) {
+        let taille = infoDatas.length;
+        let typenotif = infoDatas[1].type;
+
+        if(typenotif === "general"){
+            monInfo.push(infoDatas[taille])
+
+            return (
+                <div>   
                 {infoDatas.map(infoData =>
                     <div>
     
@@ -37,8 +45,21 @@ export default function Info()  {
                     </div>
                 )}
             </div>
-    
-        )
+                
+            )
+
+
+
+        } else {
+            return (
+                <div>
+                    <p>marche po</p>
+                    
+                </div>
+            )
+        }
+    }
+
 
 
 
