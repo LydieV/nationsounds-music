@@ -3,8 +3,8 @@ import {Link} from "react-router-dom";
 
 export default function Menu()  {
     return (
-        <ul class="menu">
-          <li>  <Link to={'/'}> Accueil </Link></li>
+        <ul className={"menu"}>
+          <li><Link to={'/'}> Accueil </Link></li>
           <li><Link to={'/login'}> Se connecter </Link></li>
           <li><Link to={'/register'}> S'inscrire </Link></li>
           <li><Link to={'/carte'}> Carte interactive </Link></li>
