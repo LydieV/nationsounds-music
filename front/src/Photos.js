@@ -7,6 +7,7 @@ export default function Photos(){
     return(
         <div>
         <Header></Header>
+        <p> page photos</p>
         </div>
 
     );
