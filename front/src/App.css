@@ -1543,6 +1543,22 @@ hr {
 .contact-rs p {
   margin-bottom: 15px;
 }
+.contact-rs .social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  z-index: -1;
+}
+.contact-rs .social a{
+  margin: auto 0.6rem;
+  color: var(--magenta);
+}
+.contact-rs .social a img{
+  filter: brightness(30%);
+}
+
 .contact-mail {
   text-align: center;
 }
@@ -1719,23 +1735,23 @@ hr {
 }
 
 /*-----------------------
-    Login
+    Mentions Légales
 -----------------------*/
 .mention-legales {
-  margin: 35px 24px;
+  margin: 5vh 7vw;
 }
 .mention-legales div {
-  margin-bottom: 35px;
+  margin-bottom: 10vh;
 }
 .mention-legales div h2 {
-  margin-bottom: 20px;
+  margin-bottom: 7vh;
 }
 .mention-legales div p {
   font-family: Luciole;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 140%;
-  margin-bottom: 15px;
+  margin-bottom: 5vh;
 }
 
 /*-----------------------

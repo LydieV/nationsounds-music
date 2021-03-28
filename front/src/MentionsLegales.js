@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
+import Footer from "./Footer";
 
 export default function MentionsLegales(){
     const [cookies, removeCookie] = useCookies(['login']);
@@ -79,6 +80,7 @@ export default function MentionsLegales(){
                     </div>
                     
                 </div>
+                <Footer></Footer>
             </div>
         )
     } else {
@@ -146,6 +148,7 @@ export default function MentionsLegales(){
                     </div>
                     
                 </div>
+                <Footer></Footer>
             </div>
     
         );

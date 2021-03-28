@@ -5,6 +5,7 @@ import Menu from "./Menu";
 import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
+import Footer from "./Footer";
 
 const Partenaires = () => {
     const [cookies, removeCookie] = useCookies(['login']);
@@ -67,6 +68,7 @@ const Partenaires = () => {
                         </div>
     
                     </div>
+                    <Footer></Footer>
                 </div>
                 
                 )}
@@ -115,6 +117,7 @@ const Partenaires = () => {
                         </div>
     
                     </div>
+                    <Footer></Footer>
                 </div>
                 
                 )}
