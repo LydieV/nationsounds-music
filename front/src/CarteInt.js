@@ -3,6 +3,8 @@ import Menu from "./Menu";
 import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
+import Carte from "./Carte";
+import Footer from "./Footer";
 
 export default function CarteInt(){
     const [cookies, removeCookie] = useCookies(['login']);
@@ -16,16 +18,22 @@ export default function CarteInt(){
 
     if (cookies.login && cookies.login.email){
         return(
-            <div className={"contenu"}>
+            <div className="contenu">
                 <MenuConnected disconnect={e => disconnect()}/>
-                <p> carte interactive</p>
+                <div class="map-carteint">
+                <Carte></Carte>
+                </div>
+                <Footer></Footer>
             </div>
         )
     } else {
         return(
-            <div className={"contenu"}>
+            <div className="contenu">
                 <Menu></Menu>
-                <p> carte interactive</p>
+                <div class="map-carteint">
+                <Carte></Carte>
+                 </div>
+                <Footer></Footer>
             </div>
     
         )

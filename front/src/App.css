@@ -41,7 +41,7 @@ body{
         Header
 -------------------------
 -----------------------*/
-/*
+/*  
 #nav-container {
   position: absolute;
   height: 100vh;
@@ -783,6 +783,23 @@ top: 0px;
     margin: 15px 15px 15px 10px;
 
 
+}
+/****************
+/////*****map****
+*****************/
+
+.contenu .map-carteint .map {
+width: 100%;
+height:  82.234vh;
+left: 0vh;
+margin-bottom: -0.71633vh;
+top: 10.688em;
+overflow: scroll;
+margin-top: 14.752vh
+;
+border: var(--black);
+user-select: none;
+  
 }
 
 
