@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "./Header";
 
 export default function Cookies(){
     return(
         <div>
-            <p> Page Cookies </p>
+         <Header></Header>
         </div>
 
     );
