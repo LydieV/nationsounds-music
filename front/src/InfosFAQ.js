@@ -9,6 +9,7 @@ import Menu from "./Menu";
 import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
+import Footer from "./Footer";
 
 const InfosFAQ = () => {
     const [cookies, removeCookie] = useCookies(['login']);
@@ -46,6 +47,7 @@ const InfosFAQ = () => {
                 <p className={"faq"}> c'est pour le margin </p>
                 <Notification></Notification>
                 </div>
+                <Footer></Footer>
             </div>
         )
     } else {
@@ -66,6 +68,7 @@ const InfosFAQ = () => {
                 <p className={"faq"}> c'est pour le margin </p>
                 <Notification></Notification>
                 </div>
+                <Footer></Footer>
             </div>
         )
     }
