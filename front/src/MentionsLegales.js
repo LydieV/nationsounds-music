@@ -19,7 +19,6 @@ export default function MentionsLegales(){
         return(
             <div className={"contenu"}>
                 <MenuConnected disconnect={e => disconnect()}/>
-                <p className={"faq"}> c'est pour le margin </p>
                 <div className={"mention-legales"}>
                     <div>
                         <h2>1. PRÉSENTATION DU SITE</h2>
@@ -87,7 +86,6 @@ export default function MentionsLegales(){
         return(
             <div className={"contenu"}>
                 <Menu></Menu>
-                <p className={"faq"}> c'est pour le margin </p>
                 <div className={"mention-legales"}>
                     <div>
                         <h2>1. PRÉSENTATION DU SITE</h2>

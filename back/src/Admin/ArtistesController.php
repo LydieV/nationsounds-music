@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Admin\Controller;
 
 use App\Entity\Artistes;
 use App\Form\ArtistesType;
