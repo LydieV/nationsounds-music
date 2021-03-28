@@ -341,7 +341,7 @@ user-select: none;
 .blockSwitchProgramme{
   margin-left: 2.4vw;
   margin-right: 2.4vw;
-  z-index: -2;
+  z-index: auto;
   position:relative
 }
 
