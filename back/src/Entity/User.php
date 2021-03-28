@@ -2,13 +2,26 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * 
+ * @ApiResource(
+ *     collectionOperations={"get"={"normalization_context"={"groups"="user:list"}}},
+ *     itemOperations={"get"={"normalization_context"={"groups"="user:item"}}},
+ *     paginationEnabled=false
+ * )
+ * 
+ * @ApiFilter(SearchFilter::class, properties={"user": "exact"})
+ * 
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  */
 class User implements UserInterface
@@ -17,16 +30,22 @@ class User implements UserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * 
+     * @Groups({"user:list", "user:item"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * 
+     * @Groups({"user:list", "user:item"})
      */
     private $email;
 
     /**
      * @ORM\Column(type="json")
+     * 
+     * @Groups({"user:list", "user:item"})
      */
     private $roles = [];
 

@@ -22,7 +22,6 @@ function Home() {
             <div className={"contenu"}>
                 <MenuConnected disconnect={e => disconnect()}/>
                 <p> Page d'accueil</p>
-                <Artistes></Artistes>
                 <Footer></Footer>
             </div>
         )
@@ -31,7 +30,6 @@ function Home() {
             <div className={"contenu"}>
                 <Menu></Menu>
                 <p> Page accueil </p>
-                <Artistes></Artistes>
                 <Footer></Footer>
                 
             </div>
