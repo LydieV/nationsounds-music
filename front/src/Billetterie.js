@@ -1,6 +1,6 @@
 import React from "react";
 import {useCookies} from 'react-cookie';
-import Header from "./Header";
+import Menu from "./Menu";
 import {Redirect} from 'react-router-dom';
 import MenuConnected from "./MenuConnected";
 
@@ -15,16 +15,16 @@ export default function Billetterie(){
     }
     if (cookies.login && cookies.login.email){
         return(
-            <div>
+            <div className={"contenu"}>
                 <p> je suis connecté</p>
                 <MenuConnected disconnect={e => disconnect()}/>
             </div>
         )
     } else {
         return(
-            <div>
-                <Header></Header>
-                <p> Page Mentions Billetterie </p>
+            <div className={"contenu"}>
+                <Menu></Menu>
+                <p> Page Billetterie </p>
             </div>
     
         );

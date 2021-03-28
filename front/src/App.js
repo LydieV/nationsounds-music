@@ -16,6 +16,7 @@ import CarteInt from './CarteInt';
 import Contact from './Contact';
 import Photos from './Photos';
 import Programme from './Programme';
+import Artistes from './Artistes';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route exact={true} path="/photos" component={Photos} />
             <Route exact={true} path="/mentionslegales" component={MentionsLegales} />
             <Route exact={true} path="/cookies" component={Cookies} />
+            <Route exact={true} path="/artistes" component={Artistes} />
             <Route path="*" component={() => <p>Tu sais pas trouvé une page correcte t'es nul mec</p>} />
           </Switch>
         </div>

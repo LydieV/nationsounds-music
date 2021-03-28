@@ -41,7 +41,7 @@ body{
         Header
 -------------------------
 -----------------------*/
-
+/*
 #nav-container {
   position: absolute;
   height: 100vh;
@@ -179,7 +179,7 @@ img {
   vertical-align: middle;
   height: auto;
   width: 100%;
-}
+}*/
 
 
 
@@ -308,19 +308,40 @@ user-select: none;
 -------------------------
 -----------------------*/
 
+/*-----------------------
+-------------------------
+         Menu
+-------------------------
+-----------------------*/
+
 .deconnexion {
-  background-image:url('https://image.freepik.com/icones-gratuites/deconnexion_318-10026.jpg');
+  background-image:url('images/icone_deconnexion.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  width:20vw;
-  height:6vh;
+  background-position: right;
+  height:5vh;
+  margin-right: 2vw;
+  margin-top: 3.5vh;
 }
-/*programme*/
+
+/*-----------------------
+-------------------------
+    Toutes les pages
+-------------------------
+-----------------------*/
+.contenu{
+  margin-top: 12vh;
+}
+
+/*-----------------------
+-------------------------
+       Programme
+-------------------------
+-----------------------*/
 .blockSwitchProgramme{
   margin-left: 2.4vw;
   margin-right: 2.4vw;
-  z-index: -2;
+  z-index: auto;
   position:relative
 }
 
