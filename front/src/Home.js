@@ -6,11 +6,11 @@ import Footer from "./Footer";
 
 function Home() {
     return (
+        
         <div>
             <Header></Header>
-            <p> Page accueil </p>
-            <Artistes></Artistes>
-            <Footer></Footer>
+       
+            
         </div>
     )
 }
