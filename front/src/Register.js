@@ -3,13 +3,12 @@ import axios from 'axios';
 import {Redirect, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import {useCookies, withCookies} from 'react-cookie';
-import Header from "./Header";
+import Menu from "./Menu";
 
 function FormRegister(props){
     return(
-        <div>
-            <Header></Header>
-            <p className={"faq"}> c'est pour le margin </p>
+        <div className={"contenu"}>
+            <Menu></Menu>
             <div className={"register-option"}>
                 <h1>S’inscrire avec :</h1>
                 <button className={"Google-button"}>Google</button>

@@ -1,40 +1,57 @@
 import React from "react";
-import Header from "./Header";
+import MenuConnected from "./MenuConnected";
+import {useCookies} from 'react-cookie';
+import {Redirect} from 'react-router-dom';
 import Tabs from "./Tabs";
 
 export default function Profil(){
-    return(
-        <div>
-            <div>
-            <Header></Header>
-            <p className={"faq"}> c'est pour le margin </p>
+    const [cookies, removeCookie] = useCookies(['login']);
 
-            {/*JSON.stringify(infosfaqDatas)*/}
-            <div className={"blockSwitchProgramme"}>
+    function disconnect() {
+        removeCookie('login');
+        return(
+            <Redirect to={'/'} />
+        );
+    }
 
-
-
-            <Tabs>
-                <div title="Profil" > 
-                    <div className={"profil-info"}>
-                        <button>Modifier les informations</button>
-                        <input type="text" name="nom" placeholder="Votre nom"></input>
-                        <input type="text" name="prenom" placeholder="Votre prénom"></input>
-                        <input type="email" name="email" placeholder="Votre adresse mail"></input>
-                        <input type="password" name="password" placeholder="•••••••••••"></input>
+    if (cookies.login && cookies.login.email){
+        return(
+            <div className={"contenu"}>
+                
+                <div>
+                <MenuConnected disconnect={e => disconnect()}/>
+    
+                {/*JSON.stringify(infosfaqDatas)*/}
+                <div className={"blockSwitchProgramme"}>
+                <Tabs>
+                    <div title="Profil" > 
+                        <div className={"profil-info"}>
+                            <button>Modifier les informations</button>
+                            <input type="text" name="nom" placeholder="Votre nom"></input>
+                            <input type="text" name="prenom" placeholder="Votre prénom"></input>
+                            <input type="email" name="email" placeholder="Votre adresse mail"></input>
+                            <input type="password" name="password" placeholder="•••••••••••"></input>
+                        </div>
                     </div>
-                </div>
-
-                <div title="Billet">
-                    <div className={"billet-info"}>
-                        <button>Voir mon billet</button>
+    
+                    <div title="Billet">
+                        <div className={"billet-info"}>
+                            <button>Voir mon billet</button>
+                        </div>
                     </div>
+                </Tabs>
+                
                 </div>
-            </Tabs>
-            
             </div>
-        </div>
-        </div>
+            </div>
+    
+        );
+    } else {
+        return(
+            <Redirect to={'/'} />
+    
+        )
+    }
 
-    );
+    
 }

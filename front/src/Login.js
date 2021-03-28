@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import Menu from "./Menu";
 import {Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import axios from "axios";
@@ -8,10 +8,8 @@ import {Redirect} from 'react-router-dom';
 
 function FormLogin(props){
     return(
-        <div>
-            <Header></Header>
-            <p className={"faq"}> c'est pour le margin </p>
-            
+        <div className={"contenu"}>
+            <Menu></Menu>            
             <form action="#" onSubmit={props.onSignin} className={"login-form"}>
                 <h1>Connexion</h1>
                 <input type="email" id="email" ref={props.emailRef} name="email" placeholder="Votre adresse mail"/>
