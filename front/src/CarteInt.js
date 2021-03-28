@@ -1,9 +1,11 @@
 import React from "react";
+import Header from "./Header";
 
 export default function CarteInt(){
     return(
         <div>
-            <p> Page Carte interactive </p>
+        <Header></Header>
+        <p> carte interactive</p>
         </div>
 
     );

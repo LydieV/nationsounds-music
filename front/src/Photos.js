@@ -1,9 +1,13 @@
 import React from "react";
+import Header from "./Header";
+
+
 
 export default function Photos(){
     return(
         <div>
-            <p> Page Photos </p>
+        <Header></Header>
+        <p> page photos</p>
         </div>
 
     );

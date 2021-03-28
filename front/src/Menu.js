@@ -3,20 +3,23 @@ import {Link} from "react-router-dom";
 
 export default function Menu()  {
     return (
-        <nav className={"navBarre"}>
-            <Link to={'/'}> Accueil </Link>
-            <Link to={'/login'}> Se connecter </Link>
-            <Link to={'/register'}> S'inscrire </Link>
-            <Link to={'/carte'}> Carte interactive </Link>
-            <Link to={'/infosFAQ'}> Informations pratiques / FAQ </Link>
-            <Link to={'/billetterie'}> Billetterie </Link>
-            <Link to={'/programme'}> Programme </Link>
-            <Link to={'/contact'}> Contact </Link>
-            <Link to={'/partenaires'}> Partenaires </Link>
-            <Link to={'/photos'}> Photos </Link>
-        </nav>
+        <ul className={"menu"}>
+          <li><Link to={'/'}> Accueil </Link></li>
+          <li><Link to={'/login'}> Se connecter </Link></li>
+          <li><Link to={'/register'}> S'inscrire </Link></li>
+          <li><Link to={'/carte'}> Carte interactive </Link></li>
+          <li> <Link to={'/infosFAQ'}> Informations pratiques / FAQ </Link></li>
+          <li><Link to={'/billetterie'}> Billetterie </Link></li>
+          <li><Link to={'/programme'}> Programme </Link></li>
+          <li><Link to={'/contact'}> Contact </Link></li>
+          <li> <Link to={'/partenaires'}> Partenaires </Link></li>
+          <li><Link to={'/photos'}> Photos </Link></li>
+       </ul>
 
     );
 
 }
+
+
+
 
