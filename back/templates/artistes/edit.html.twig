@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Artiste{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .buttonsAlign{
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            width: 20%;
+        }
+    </style>
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1 class="text-center">Modifier catégorie</h1>
+
+        {{ include('artistes/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
+
+        <div class="buttonsAlign">   
+            <a href="{{ path('artistes_index') }}" class="badge badge-primary">Retour à la liste</a>
+            {{ include('artistes/_delete_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}
