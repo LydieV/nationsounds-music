@@ -2,12 +2,12 @@
 
 namespace App\Form;
 
-use App\Entity\Artistes;
+use App\Entity\Artiste;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ArtistesType extends AbstractType
+class ArtisteType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -20,7 +20,7 @@ class ArtistesType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Artistes::class,
+            'data_class' => Artiste::class,
         ]);
     }
 }

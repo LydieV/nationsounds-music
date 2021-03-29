@@ -5,51 +5,51 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
-use App\Repository\ArtistesRepository;
+use App\Repository\ArtisteRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ORM\Entity(repositoryClass=ArtistesRepository::class)
+ * @ORM\Entity(repositoryClass=ArtisteRepository::class)
  *
  * @ApiResource(
- *     collectionOperations={"get"={"normalization_context"={"groups"="artistes:list"}}},
- *     itemOperations={"get"={"normalization_context"={"groups"="artistes:item"}}},
+ *     collectionOperations={"get"={"normalization_context"={"groups"="artiste:list"}}},
+ *     itemOperations={"get"={"normalization_context"={"groups"="artiste:item"}}},
  *     paginationEnabled=false
  * )
  * 
- * @ApiFilter(SearchFilter::class, properties={"artistes": "exact"})
+ * @ApiFilter(SearchFilter::class, properties={"artiste": "exact"})
  */
 
-class Artistes
+class Artiste
 {
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      * 
-     * @Groups({"artistes:list", "artistes:item"})
+     * @Groups({"artiste:list", "artiste:item"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * 
-     * @Groups({"artistes:list", "artistes:item"})
+     * @Groups({"artiste:list", "artiste:item"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
      * 
-     * @Groups({"artistes:list", "artistes:item"})
+     * @Groups({"artiste:list", "artiste:item"})
      */
     private $style;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Evenement::class, mappedBy="artistes")
+     * @ORM\ManyToMany(targetEntity=Evenement::class, mappedBy="artiste")
      */
     private $evenements;
 
@@ -114,3 +114,4 @@ class Artistes
         return $this;
     }
 }
+

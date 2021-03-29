@@ -17,6 +17,8 @@ import Contact from './Contact';
 import Photos from './Photos';
 import Programme from './Programme';
 import Artistes from './Artistes';
+import AdminInfo from './AdminInfo';
+import AdminNotification from './AdminNotification';
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
             <Route exact={true} path="/mentionslegales" component={MentionsLegales} />
             <Route exact={true} path="/cookies" component={Cookies} />
             <Route exact={true} path="/artistes" component={Artistes} />
+            <Route exact={true} path="/admininfo" component={AdminInfo} />
+            <Route exact={true} path="/adminnotification" component={AdminNotification} />
             <Route path="*" component={() => <p>Tu sais pas trouvé une page correcte t'es nul mec</p>} />
           </Switch>
         </div>
