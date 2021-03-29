@@ -14,32 +14,26 @@ export default function Info()  {
     }, []);
 
 
-    /*boucle for avec i < 2
-    let taille = infoDatas.length;
-    if(infoDatas.type === "general"){
-        monInfo.push(infoDatas[taille])
-    }
-        deuxieme boucle for mais avec l'autre type d'info
-        
-    */
-        return (
-            <div>   
+
+            return (
+                <div> 
+                    <div className={"conteneur-notif"}>
                 {infoDatas.map(infoData =>
                     <div>
     
     
                         <div className={"card-notif"}>
-                            <p key={infoData.id=1}> {infoData.titre}</p>
+                            <p> {infoData.titre}</p>
                             <a href={"./infosFAQ"}> &gt; </a>
                         </div>
     
     
                     </div>
                 )}
+                </div>
             </div>
-    
-        )
-
+                
+            )
 
 
 

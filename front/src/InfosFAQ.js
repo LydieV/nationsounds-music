@@ -44,8 +44,7 @@ const InfosFAQ = () => {
                         <Info></Info>
                     </div>
                 </Tabs>
-                <p className={"faq"}> c'est pour le margin </p>
-                <Notification></Notification>
+
                 </div>
                 <Footer></Footer>
             </div>
@@ -65,8 +64,7 @@ const InfosFAQ = () => {
                         <Info></Info>
                     </div>
                 </Tabs>
-                <p className={"faq"}> c'est pour le margin </p>
-                <Notification></Notification>
+
                 </div>
                 <Footer></Footer>
             </div>
