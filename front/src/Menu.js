@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 export default function Menu()  {
     return (
-        <div>
+        <div className={"navbar"}>
           <div className={"header-menu"}>
             <a href="./" className={"logo"}><img src="https://svgshare.com/i/VPB.svg" alt="logo"/></a>
             <a href="./Login" className={"login"}><img src="https://svgshare.com/i/VNn.svg" alt="login"/></a>
@@ -50,10 +50,16 @@ export default function Menu()  {
                     <li>
                         <Link to={'/photos'}> Photos </Link>
                     </li>
-                </ul>
-            </div>
-
+                    </ul>
+                    <ul>
+                    <a href="https://instagram.com " target="_blank" class={"instagram-menu"}><img src="https://svgshare.com/i/VXS.svg"  alt="lien instagram" /></a>
+                    <a href="https://facebook.com" target="_blank" class={"facebook-menu"}><img src="https://svgshare.com/i/VWC.svg" alt="lien facebook" /></a>
+                    <a href="https://twitter.com" target="_blank" class={"twitter-menu"}><img src="https://svgshare.com/i/VWj.svg" alt="lien twitter" /></a>
+                    </ul>
+                </div>
+                    
           </div>
+          
       </div>
         
 
