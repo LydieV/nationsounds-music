@@ -9,10 +9,9 @@ import Footer from "./Footer";
 
 const Partenaires = () => {
     const [cookies, removeCookie] = useCookies(['login']);
-    let [partenaireDatas, setPartenaireDatas] = useState([]) // variable magique qui lorsuqe nous la modifions relance le rendering Partenaires
+    let [partenaireDatas, setPartenaireDatas] = useState([]);
     
     useEffect(() => {
-        // je recherche ma data en base
         axios
             .get('https://localhost:8000/api/partenaires')
             .then(datas => {
@@ -31,97 +30,37 @@ const Partenaires = () => {
         return(
             <div className={"contenu"}>
                 <MenuConnected disconnect={e => disconnect()}/>
-                <p> Liste des partenaires 2 </p>
-                
-                {partenaireDatas.map(partenaireData =>
-                <div>
-                   <p> Son nom :  {partenaireData.id} </p> 
-                   <p> Son style :  {partenaireData.nom} </p> 
-                   <br/>
-                    <h1>Nos Partenaires</h1>
+
+                <h1>Nos Partenaires</h1>
                     <div className={"card-list"}>
-    
-    
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
+                        {partenaireDatas.map(partenaireData =>
+                        <div>
+                            <div className={"card-partenaire"}>
+                                <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
+                                <p className={"text-partenaire"}>{partenaireData.nom}</p>
+                            </div>
                         </div>
-    
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
-                        </div>
-                        
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
-                        </div>
-    
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
-                        </div>
-    
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
-                        </div>
-    
-                    </div>
+                        )}
                     <Footer></Footer>
-                </div>
-                
-                )}
+                    </div>
             </div>
         )
     } else {
         return (
             <div className={"contenu"}>
                 <Menu></Menu>
-                <p> Liste des partenaires 2 </p>
-       
-                {/*JSON.stringify(partenaireDatas)*/}
-                
-                {partenaireDatas.map(partenaireData =>
-                <div>
-                   <p> Son nom :  {partenaireData.id} </p> 
-                   <p> Son style :  {partenaireData.nom} </p> 
-                   <br/>
-                    <h1>Nos Partenaires</h1>
+                <h1>Nos Partenaires</h1>
                     <div className={"card-list"}>
-    
-    
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
+                        {partenaireDatas.map(partenaireData =>
+                        <div>
+                            <div className={"card-partenaire"}>
+                                <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
+                                <p className={"text-partenaire"}>{partenaireData.nom}</p>
+                            </div>
                         </div>
-    
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
-                        </div>
-                        
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
-                        </div>
-    
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
-                        </div>
-    
-                        <div className={"card-partenaire"}>
-                            <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                            <p className={"text-partenaire"}>{partenaireData.nom}</p>
-                        </div>
-    
-                    </div>
+                        )}
                     <Footer></Footer>
-                </div>
-                
-                )}
-    
+                    </div>
             </div>
         )
     }
