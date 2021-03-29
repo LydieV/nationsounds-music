@@ -31,7 +31,7 @@ export default function Info()  {
                 <MenuConnected disconnect={e => disconnect()}/>
                 <div className={"dot-info"}>
                     <p>Informations importantes</p>
-                    <p>Informations générales</p>
+                    
                 </div>
                 
                 {infoDatas.map(infoData =>
@@ -51,7 +51,7 @@ export default function Info()  {
                 <Menu></Menu>
                 <div className={"dot-info"}>
                     <p>Informations importantes</p>
-                    <p>Informations générales</p>
+                    
                 </div>
                 
                 {infoDatas.map(infoData =>
