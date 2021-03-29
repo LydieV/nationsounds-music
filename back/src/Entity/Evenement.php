@@ -48,11 +48,11 @@ class Evenement
     private $type;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Artistes::class, inversedBy="evenements")
+     * @ORM\ManyToMany(targetEntity=Artiste::class, inversedBy="evenements")
      * 
      * @Groups({"evenement:list", "evenement:item"})
      */
-    private $artistes;
+    private $artiste;
 
     /**
      * @ORM\Column(type="datetime")
@@ -84,7 +84,7 @@ class Evenement
 
     public function __construct()
     {
-        $this->artistes = new ArrayCollection();
+        $this->artiste = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -117,25 +117,25 @@ class Evenement
     }
 
     /**
-     * @return Collection|Artistes[]
+     * @return Collection|Artiste[]
      */
-    public function getArtistes(): Collection
+    public function getArtiste(): Collection
     {
-        return $this->artistes;
+        return $this->artiste;
     }
 
-    public function addArtiste(Artistes $artiste): self
+    public function addArtiste(Artiste $artiste): self
     {
-        if (!$this->artistes->contains($artiste)) {
-            $this->artistes[] = $artiste;
+        if (!$this->artiste->contains($artiste)) {
+            $this->artiste[] = $artiste;
         }
 
         return $this;
     }
 
-    public function removeArtiste(Artistes $artiste): self
+    public function removeArtiste(Artiste $artiste): self
     {
-        $this->artistes->removeElement($artiste);
+        $this->artiste->removeElement($artiste);
 
         return $this;
     }

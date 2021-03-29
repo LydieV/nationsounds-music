@@ -9,9 +9,9 @@ import Tabs from "./Tabs";
 const Programme = () => {
     const [cookies, removeCookie] = useCookies(['login']);
     let [evenementDatas, setEvenementDatas] = useState([]);
-    let [artistesDatas, setArtistesDatas] = useState([]);
+    let [artisteDatas, setArtisteDatas] = useState([]);
 
-    setArtistesDatas = [];
+    setArtisteDatas = [];
 
  /*   useEffect(() => {
         axios
@@ -19,7 +19,7 @@ const Programme = () => {
         .then(datas => {
             setEvenementDatas(datas.data["hydra:member"])
             evenementDatas.map(evenementData =>
-                getArtistes(evenementData.artistes)
+                getArtiste(evenementData.artiste)
                 )
         })
     }, []);*/
@@ -29,25 +29,25 @@ const Programme = () => {
         .then(datas => {
             setEvenementDatas(datas.data["hydra:member"])
             evenementDatas.map(evenementData =>
-                getArtistes(evenementData.artistes)
+                getArtiste(evenementData.artiste)
                 )})
     }
 
-    async function getArtistes(madata){
+    async function getArtiste(madata){
         await axios
         .get('https://localhost:8000'+madata)
         .then(datas => {
-            artistesDatas.push(datas.data)
+            artisteDatas.push(datas.data)
             getProgramme()
         })
     }
 
     async function getProgramme(){
         for(let i =0; i < evenementDatas.length; i++){
-            for(let j=0; j < artistesDatas.length; j++){
-               let urlartiste = "/api/artistes/"+artistesDatas[j].id;
-                if(evenementDatas[i].artistes === urlartiste){
-                    evenementDatas[i].artistes.push({"id" : artistesDatas[j].id, 'name' : artistesDatas[j].name,'style' : artistesDatas[j].style});
+            for(let j=0; j < artisteDatas.length; j++){
+               let urlartiste = "/api/artistes/"+artisteDatas[j].id;
+                if(evenementDatas[i].artiste === urlartiste){
+                    evenementDatas[i].artiste.push({"id" : artisteDatas[j].id, 'name' : artisteDatas[j].name,'style' : artisteDatas[j].style});
                   console.log(evenementDatas);
                 }
             }
@@ -115,11 +115,11 @@ const Programme = () => {
                         </div>
                     </Tabs>
     
-                    {JSON.stringify(artistesDatas)}
-                    {artistesDatas.map(artistesData =>
+                    {JSON.stringify(artisteDatas)}
+                    {artisteDatas.map(artisteData =>
                         <div>
-                            <p>{artistesData.name}</p>
-                            <p>{artistesData.id}</p>
+                            <p>{artisteData.name}</p>
+                            <p>{artisteData.id}</p>
                         </div>
                         )}
                     <br/>
@@ -128,8 +128,8 @@ const Programme = () => {
                         <div>
                             <p>{evenementData.type}</p>
                             <p>{evenementData.horaireDebut}</p>                        
-                            <p>{evenementData.artistes}</p>
-                            <p>{evenementData.artistes.name}</p>
+                            <p>{evenementData.artiste}</p>
+                            <p>{evenementData.artiste.name}</p>
                             
                         </div>
                         )}
@@ -188,11 +188,11 @@ const Programme = () => {
                         </div>
                     </Tabs>
     
-                    {JSON.stringify(artistesDatas)}
-                    {artistesDatas.map(artistesData =>
+                    {JSON.stringify(artisteDatas)}
+                    {artisteDatas.map(artisteData =>
                         <div>
-                            <p>{artistesData.name}</p>
-                            <p>{artistesData.id}</p>
+                            <p>{artisteData.name}</p>
+                            <p>{artisteData.id}</p>
                         </div>
                         )}
                     <br/>
@@ -201,8 +201,8 @@ const Programme = () => {
                         <div>
                             <p>{evenementData.type}</p>
                             <p>{evenementData.horaireDebut}</p>                        
-                            <p>{evenementData.artistes}</p>
-                            <p>{evenementData.artistes.name}</p>
+                            <p>{evenementData.artiste}</p>
+                            <p>{evenementData.artiste.name}</p>
                             
                         </div>
                         )}

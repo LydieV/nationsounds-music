@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import MenuConnected from "./MenuConnected";
 
-const Artistes = () => {
+const AdminInfo = () => {
     const [cookies, removeCookie] = useCookies(['login']);  
-    const [loading, setLoading] = useState(true);
-    const [admin, setAdmin] = useState(false);
-    const [user, setUser] = useState(false);
+  //  const [loading, setLoading] = useState(true);
+ //   const [admin, setAdmin] = useState(false);
+ //   const [user, setUser] = useState(false);
 
-    let [userDatas, setUserDatas] = useState([]);
-    let [artisteDatas, setArtisteDatas] = useState([]); // variable magique qui lorsuqe nous la modifions relance le rendering Artiste
+  //  let [userDatas, setUserDatas] = useState([]);
+    let [infoDatas, setInfoDatas] = useState([]); // variable magique qui lorsuqe nous la modifions relance le rendering Artiste
     
     function disconnect() {
         removeCookie('login');
@@ -21,57 +21,67 @@ const Artistes = () => {
         );
     }
 
-    async function getArtiste(){
+    async function getInfo(){
         await axios
-        .get('https://localhost:8000/api/artistes')
+        .get('https://localhost:8000/api/infos')
         .then(datas => {
-            setArtisteDatas(datas.data["hydra:member"])
-            setUser(true)
+            setInfoDatas(datas.data["hydra:member"])
+           // setUser(true)
         });
     }
 
-    async function getUsers(){
+  /*  async function getUsers(){
         await axios
         .get('https://localhost:8000/api/users')
         .then(datas => {
             setUserDatas(datas.data["hydra:member"])
         })
-    }
+    }*/
 
-    function modifArtiste(e, element){
+    function modifInfo(e, element){
         e.preventDefault();
         let id = document.querySelector("input[name='id"+element+"']").value;
-        let name = document.querySelector("input[name='name"+element+"']").value;
-        let style = document.querySelector("input[name='style"+element+"']").value;
-        let artiste = {
+        let titre = document.querySelector("input[name='titre"+element+"']").value;
+        let type = document.querySelector("input[name='type"+element+"']").value;
+        let description = document.querySelector("input[name='description"+element+"']").value;
+        let info = {
             id: id,
-            name: name,
-            style: style
+            titre: titre,
+            type: type,
+            description: description
         }
-        if(name === '' || style === '' ){
+        if(titre === '' || type === '' || description === ''){
             alert("Remplissez tous les champs de l'artiste");
         } else {
-            axios.put('https://localhost:8000/artiste/'+id+'/edit', {artiste});
+            axios.put('https://localhost:8000/info/'+id+'/edit', {info});
         }
-    }
-
-    function ajoutArtiste(e){
-        e.preventDefault();
-        let name = document.querySelector("input[name='newName']").value;
-        let style = document.querySelector("input[name='newStyle']").value;
-        let newArtiste = {
-            name: name,
-            style: style
-        }
-
-        axios.post('https://localhost:8000/artiste/new', {newArtiste}).catch(error => console.log(error)).then(document.querySelector("form[name='createArtiste']").reset());
     }
 
     useEffect(() => {
-        getArtiste()
+        getInfo()
     }, []);
 
-    useEffect(() => {
+    return(
+        <div className={"contenu"}>
+                        <MenuConnected disconnect={e => disconnect()}></MenuConnected>
+                        <p> Liste des infos</p>
+                        {infoDatas.map(infoData =>
+                        <form action="#" onSubmit={e => modifInfo(e, infoData.id)}>
+                            <input type="text" name={"id"+infoData.id} value={infoData.id} />
+                            <label> {infoData.titre} </label>
+                            <input type="text" name={"name"+infoData.id} />
+                            <label> {infoData.type} </label>
+                            <input type="text" name={"type"+infoData.id}/>
+                            <label> {infoData.description} </label>
+                            <input type="text" name={"description"+infoData.id}/>
+    
+                            <input type="submit" value="Modifier"/>
+                        </form>
+                        )}
+                    </div>   
+    )
+
+   /* useEffect(() => {
         getUsers()
     }, []);
         
@@ -101,12 +111,6 @@ const Artistes = () => {
                 return(
                     <div className={"contenu"}>
                         <MenuConnected disconnect={e => disconnect()}></MenuConnected>
-                        <form action="#" name="createArtiste" onSubmit={e => ajoutArtiste(e)}>
-                            <input type="text" name="newName" placeholder="Nom"/>
-                            <input type="text" name="newStyle" placeholder="Style"/>
-
-                            <input type="submit" value="Ajouter"/>
-                        </form>
                         <p> Liste des artistes </p>
                         {artisteDatas.map(artisteData =>
                         <form action="#" onSubmit={e => modifArtiste(e, artisteData.id)}>
@@ -131,7 +135,7 @@ const Artistes = () => {
                 <Redirect to={'/'} />
             )
         }
-    }    
+    }    */
 }
 
-export default Artistes;
+export default AdminInfo;
