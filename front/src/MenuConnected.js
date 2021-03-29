@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 export default function MenuConnected(props){
     return(
-        <div>
+        <div className="navbar">
           <div className={"header-menu"}>
             <a href="./" className={"logo"}>
                 <img src="https://svgshare.com/i/VPB.svg" alt="logo"/>

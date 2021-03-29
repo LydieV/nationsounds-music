@@ -28,6 +28,10 @@
   font-family: "Luciole";
   src: url("fonts/luciole/Luciole-Regular.ttf");
 }
+@font-face{
+  font-family: "Luciole-Bold";
+  src: url("fonts/luciole/Luciole-Bold.ttf");
+}
 
 body{
   background-color: var(--cloud);
@@ -592,14 +596,18 @@ user-select: none;
         Anis
 -------------------------
 -----------------------*/
-
+.navbar{
+  position: relative;
+  z-index: 999;
+}
 #nav-container {
   position: fixed;
   height: 100vh;
   width: 100%;
  left: 0px;
 top: 0px;
-pointer-events:none;        
+pointer-events:none;   
+    
 
 }
 #nav-container .bg {
@@ -627,7 +635,6 @@ pointer-events:none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 1;
   -webkit-appearance: none;
   border: 0;
   background: transparent;
@@ -643,15 +650,15 @@ z-index: 2;
 }
 .icon-bar {
   display: block;
-  width: 24px;
-  height: 3px;
+  width: 1.5em;
+  height: 0.1875em;
   background: rgb(0, 0, 0);
   transition: .3s;
-  border-radius: 10px;
+  border-radius: 0.625em;
  
 }
 .icon-bar + .icon-bar {
-  margin-top: 5px;
+  margin-top: 0.3125em;
   
 
 }
@@ -670,13 +677,13 @@ z-index: 2;
 }
 
 #nav-content {
-  margin-top: 80px;
+  margin-top: 5em;
   z-index: 1;
-  padding: 50px;
+  padding: 3.125em;
   width: 90%;
-  max-width: 250px;
+  max-width: 15.625em;
   position: absolute;
-  top: -80px;
+  top: -5em;
   left: 0px;
   height: calc(100% - 0px);
   background: #ffffff;
@@ -697,7 +704,7 @@ z-index: 2;
 }
 
 #nav-content li a {
-  padding: 10px 5px;
+  padding: 0.625em 0.3125em;
   display: block;
   text-transform: uppercase;
   transition: color .1s;
@@ -758,14 +765,11 @@ a {
   position: fixed;
 
   width: 100%;
-height: 68px;
+height: 4.25em;
 left: 0px;
 top: 0px;
   
 }
-
-
-
 
 .logo {
   float: none;
@@ -779,15 +783,42 @@ top: 0px;
 .header .login {
   float: right;
     position: relative;
-    width: 24px;
-    margin: 15px 15px 15px 10px;
+    width: 1.5em;
+    margin: 0.9375em 0.9375em 0.9375em 0.625em;
+}
 
+/***social media*****/
+
+.instagram-menu{
+  width: 25px;
+  position: relative;
+  top: -10px; left: 70px;
+  
+}
+.twitter-menu{
+  width: 25px;
+  top: -68px; left: 130px;
+  position: relative;
 
 }
+.facebook-menu{
+  width: 25px;
+  top: -40px; left: 10px;
+  position: relative;
+
+}
+
+
+
+
+
+
 /****************
 /////*****map****
 *****************/
 
+
+/****page carte inter***/
 .contenu .map-carteint .map {
 width: 100%;
 height:  82.234vh;
@@ -802,6 +833,106 @@ user-select: none;
   
 }
 
+/****homepage****/
+
+.homapage{
+  user-select: non;
+}
+.map-home .map{
+  position: static;
+  width: 87%;
+  height: 327px;
+display: block;
+  overflow: scroll;
+  margin: 653px 24px 45px 24px;
+  border-radius: 15px;
+  user-select: none;
+border: var(--black);
+user-select: none;
+}
+
+
+.h-programmes{
+  position: absolute;
+  left: 6.4%;
+  right: 19.73%;
+  top: 200px;
+  bottom: 91.58%;
+  font-family: Luciole-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 100%;
+
+  text-align: center;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  
+  color: #000000;
+}
+
+
+.h-plan{
+  height: 24px;
+  left: 24px;
+  right: 123px;
+  top: 671px;
+ position: absolute;  
+  font-family: Luciole-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 100%;
+
+  text-align: center;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  
+  color: #000000; 
+}
+
+
+.btn-billet{
+backdrop-filter: blur(15px);
+/* Note: backdrop-filter has minimal browser support */
+position: relative;
+width: 327px;
+height: 108px;
+left: 24px;
+top: 513px;
+border-radius: 15px;
+margin-bottom: -50px;
+background-image: url("https://imgur.com/Zcxhoc4.png");
+border: rgb(0, 0, 0);
+font-family: Luciole;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 100%;
+/* or 24px */
+
+text-align: center;
+font-feature-settings: 'pnum' on, 'lnum' on;
+
+color: #FFFFFF;
+}
+.h-textbillet{
+  position: absolute;
+height: 21px;
+left: 50px;
+right: 49px;
+top: 481px;
+margin-bottom: 11px;
+font-family: Luciole-Bold;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+text-align: center;
+font-feature-settings: 'pnum' on, 'lnum' on;
+
+color: #000000;
+}
 
 
 
