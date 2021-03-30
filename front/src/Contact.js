@@ -41,7 +41,7 @@ export default function Contact(){
                 <hr></hr>
                 <div className={"contact-mail"}>
                     <p>Vous souhaitez nous contacter par mail ?</p>
-                    <a href="#">contact@nation-sound.fr</a>
+                    <a href="#">contact@nation-sounds.fr</a>
                 </div>
                 <Footer></Footer>
             </div>
