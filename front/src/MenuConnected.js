@@ -37,7 +37,7 @@ export default function MenuConnected(props){
                         <Link to={'/infosFAQ'}> Informations pratiques / FAQ </Link>
                     </li>
                     <li>
-                        <Link to={'/billetterie'}> Billetterie </Link>
+                    <a target="_blank" href="https://www.leclercbilletterie.com/fr/resultat?ipSearch=the+weeknd">Billetterie</a>
                     </li>
                     <li>
                         <Link to={'/programme'}> Programme </Link>
