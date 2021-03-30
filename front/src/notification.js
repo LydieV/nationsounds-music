@@ -24,7 +24,7 @@ export default function Info()  {
     
                         <div className={"card-notif"}>
                             <p> {infoData.titre}</p>
-                            <a href={"./infosFAQ"}> &gt; </a>
+                            <a href={"./infosFAQ"}> <img src="https://svgshare.com/i/Vcr.svg"/> </a>
                         </div>
     
     

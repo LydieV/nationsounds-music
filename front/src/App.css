@@ -839,12 +839,12 @@ user-select: none;
   user-select: non;
 }
 .map-home .map{
-  position: static;
+  position: relative;
   width: 87%;
   height: 327px;
 display: block;
   overflow: scroll;
-  margin: 653px 24px 45px 24px;
+  margin: 553px 24px 45px 24px;
   border-radius: 15px;
   user-select: none;
 border: var(--black);
@@ -893,7 +893,7 @@ user-select: none;
 .btn-billet{
 backdrop-filter: blur(15px);
 /* Note: backdrop-filter has minimal browser support */
-position: relative;
+position: absolute;
 width: 327px;
 height: 108px;
 left: 24px;
@@ -935,14 +935,127 @@ color: #000000;
 }
 
 
+.programme-concert{
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  position: relative;
+  top: 246px;
+  padding-left: 20px;
+}
+.programme-concert button{
+  width: 225px;
+  height: 185px;
+  top: 50px;
+  left: 24px;
+  border-radius: 15px;
+  border: #000000
+;     margin-right: 30px;
+}
+.btn-programme1{
+  background-image: url("https://svgshare.com/i/VcV.svg");
+    background-repeat: no-repeat;
+  background-size: 280px;
+  background-position: 50% 30%;
+  ;
+}
+
+.btn-programme1 p{
+ 
+
+font-family: Luciole-Bold;
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 100%;
+/* or 28px */
+position: absolute;
+height: 56px;
+left: 36px;
+bottom: 10px;
+text-transform: uppercase;
+font-feature-settings: 'pnum' on, 'lnum' on;
+
+/* BW / White */
+
+color: #FFFFFF;
+}
+
+ 
+
+.btn-programme2{
+  background-image: url("https://svgshare.com/i/VcW.svg");
+    background-repeat: no-repeat;
+  background-size: 280px;
+  background-position: 50% 30%;
+  ;
+}
+.btn-programme2 p{
+ 
+
+  font-family: Luciole-Bold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
+  position: absolute;
+  height: 56px;
+  left: 290px;
+  bottom: 10px;
+  color: #FFFFFF;
+  }
 
 
 
 
 
+.btn-programme3{
+  background-image: url("https://svgshare.com/i/VcQ.svg");
+    background-repeat: no-repeat;
+  background-size: 280px;
+  background-position: 50% 30%;
+  ;
+}
+
+.btn-programme3 p{
+ 
+
+  font-family: Luciole-Bold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
+  position: absolute;
+  height: 56px;
+  left: 545px;
+  bottom: 10px;
+  color: #FFFFFF;
+  }
 
 
+  .Notifaction-home{
+    position: absolute;
+width: 353px;
+height: 32px;
+left: 11px;
+top: 80px;
 
+/* BW / Smoke */
+
+border-radius: 15px;
+  }
+
+  .Notifaction-home2{
+    position: absolute;
+width: 353px;
+height: 32px;
+left: 11px;
+top: 124px;
+
+/* BW / Smoke */
+
+border-radius: 15px;
+  }
 
 
 
@@ -2007,16 +2120,15 @@ hr {
    margin: 11px;
    width: 343px;
    height: 38px;
-   background-color: var(--lightGrey);
+   background-color: #EFF1F3;
    padding: 8px;
    border-radius: 15px;
    display: flex;
    justify-content: space-between;
-   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
  }
 
  .card-notif p {
-  font-family: Luciole;
+  font-family: Luciole-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
@@ -2024,7 +2136,7 @@ hr {
   float: left;
 }
 .card-notif p::before {
-  content: "⚠ ";
+  content: url("https://svgshare.com/i/Vam.svg") ;
   margin-right: 5px;
   font-size: 20px;
   color: var(--black);
@@ -2034,6 +2146,11 @@ hr {
   text-decoration: none;
   color: var(--black);
   float: right;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 318px;
+  top: 15px;
 }
 
 .conteneur-notif {

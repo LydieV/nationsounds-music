@@ -1,5 +1,4 @@
 import React from "react";
-import Artistes from "./Artistes";
 import Menu from "./Menu";
 import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
@@ -7,6 +6,7 @@ import {Redirect} from 'react-router-dom';
 import Footer from "./Footer";
 import Carte from "./Carte";
 import CookieConsent from "react-cookie-consent";
+import Info from "./notification"
 
 
 function Home() {
@@ -23,9 +23,31 @@ function Home() {
         return(
             <div className={"homepage"}>
                 <MenuConnected disconnect={e => disconnect()}/>
-                <h1>Découvrez le plan</h1>
-                <div className={"map-home"}>
+                <div className={"Notifaction-home"}>
+                <Info></Info>
+                </div>
+                <div className={"Notifaction-home2"}>
+                <Info></Info>
+                </div>
 
+                <div className={"programme-concert"}>
+                <a href='./programme'>
+                 <button class={"btn-programme1"}><p>THE</p><p><br></br> WEEKND</p></button>
+                </a>
+                <a href='./programme'>
+                 <button class={"btn-programme2"}><p>AYA</p><p><br></br>NAKAMURA</p></button>
+                </a>
+                <a href='./programme'>
+                 <button class={"btn-programme3"}><p>DAVID</p><p><br></br>GUETTA</p></button>
+                </a>
+                </div>
+                <h1 className={"h-programmes"}>Programmes concerts</h1>
+                <h2 className={"h-textbillet"}>Toujours pas de billets ?</h2>
+                <a href='./billetterie'>
+                 <button class={"btn-billet"}>Accéder à la <br></br>billeterie</button>
+                </a>
+                <h1 className={"h-plan"}>Découvrez le plan</h1>
+                <div className={"map-home"}>
                 <Carte></Carte>
                 </div>
                 <CookieConsent
@@ -72,8 +94,27 @@ function Home() {
         )
     } else {
         return (
+            
             <div className={"homepage"}>
             <Menu></Menu>
+                <div className={"Notifaction-home"}>
+                <Info></Info>
+                </div>
+                <div className={"Notifaction-home2"}>
+                <Info></Info>
+                </div>
+
+                <div className={"programme-concert"}>
+                <a href='./programme'>
+                 <button class={"btn-programme1"}><p>THE</p><p><br></br> WEEKND</p></button>
+                </a>
+                <a href='./programme'>
+                 <button class={"btn-programme2"}><p>AYA</p><p><br></br>NAKAMURA</p></button>
+                </a>
+                <a href='./programme'>
+                 <button class={"btn-programme3"}><p>DAVID</p><p><br></br>GUETTA</p></button>
+                </a>
+                </div>
                 <h1 className={"h-programmes"}>Programmes concerts</h1>
                 <h2 className={"h-textbillet"}>Toujours pas de billets ?</h2>
                 <a href='./billetterie'>
