@@ -43,12 +43,12 @@ function Home() {
                  <button class={"btn-programme3"}><p>DAVID</p><p><br></br>GUETTA</p></button>
                 </a>
                 </div>
-                <h1 className={"h-programmes"}>Programmes concerts</h1>
+                <h1 className={"h1m"}>Programmes concerts</h1>
                 <h2 className={"h-textbillet"}>Toujours pas de billets ?</h2>
                 <a href='./billetterie'>
                  <button class={"btn-billet"}>Accéder à la <br></br>billeterie</button>
                 </a>
-                <h1 className={"h-plan"}>Découvrez le plan</h1>
+                <h1 className={"h1m h-plan"}>Découvrez le plan</h1>
                 <div className={"map-home"}>
                 <Carte></Carte>
                 </div>
@@ -117,12 +117,12 @@ function Home() {
                  <button class={"btn-programme3"}><p>DAVID</p><p><br></br>GUETTA</p></button>
                 </a>
                 </div>
-                <h1 className={"h-programmes"}>Programmes concerts</h1>
+                <h1 className={"h1m"}>Programmes concerts</h1>
                 <h2 className={"h-textbillet"}>Toujours pas de billets ?</h2>
                 <a href='./billetterie'>
                  <button class={"btn-billet"}>Accéder à la <br></br>billeterie</button>
                 </a>
-                <h1 className={"h-plan"}>Découvrez le plan</h1>
+                <h1 className={"h1m h-plan"}>Découvrez le plan</h1>
                 <div className={"map-home"}>
                 <Carte></Carte>
                 </div>

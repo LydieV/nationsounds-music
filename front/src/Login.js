@@ -9,9 +9,9 @@ import {Redirect} from 'react-router-dom';
 function FormLogin(props){
     return(
         <div className={"contenu"}>
-            <Menu></Menu>            
+            <Menu></Menu>   
+            <h1 className={"l-b-m"}>Connexion</h1>         
             <form action="#" onSubmit={props.onSignin} className={"login-form"}>
-                <h1>Connexion</h1>
                 <input type="email" id="email" ref={props.emailRef} name="email" placeholder="Votre adresse mail"/>
                 <input type="password" od="password" ref={props.passwordRef} name="password" placeholder="Votre mot de passe"/>
                 

@@ -19,8 +19,8 @@ export default function Contact(){
         return(
             <div className={"contenu"}>
                 <MenuConnected disconnect={e => disconnect()}/>
+                <h1 className={"l-b-m"}>Contactez-nous !</h1>
                 <div className={"contact-form"}>
-                    <h1>Contactez-nous ! </h1>
                     <input type="email" name="email" placeholder="Votre adresse mail"></input>
                     <input type="text" name="sujet" placeholder="Sujet de votre message"></input>
                     <textarea type="textarea" name="message" placeholder="Votre message"></textarea>
@@ -41,7 +41,7 @@ export default function Contact(){
                 <hr></hr>
                 <div className={"contact-mail"}>
                     <p>Vous souhaitez nous contacter par mail ?</p>
-                    <a href="#">contact@nation-sound.fr</a>
+                    <a href="#">contact@nation-sounds.fr</a>
                 </div>
                 <Footer></Footer>
             </div>
