@@ -1265,8 +1265,40 @@ div.footer > div.container-footer.copyright{
   color: var(--grey);
 }
 
+/* cookies */
 
+div.contenu.cookies {
+  margin-left: 6vw;
+  margin-right: 6vw;
+  margin-bottom: 5vh;
+}
 
+.cookie-paragrahe{
+  margin: 18px 0px;
+}
+
+div.contenu.cookies h1{
+  margin-bottom: 12px;
+}
+
+div.contenu.cookies h2{
+  margin-bottom: 4px;
+}
+
+div.contenu.cookies ul{
+  margin-left: 34px;
+  list-style: none;
+  margin-bottom: 18px;
+}
+
+div.contenu.cookies ul li:before{
+  content: "\2022";  
+  color: var(--magenta); 
+  font-weight: bold; 
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -1em;
+}
 
 
 
