@@ -31,7 +31,7 @@ const Partenaires = () => {
             <div className={"contenu"}>
                 <MenuConnected disconnect={e => disconnect()}/>
 
-                <h1>Nos Partenaires</h1>
+                <h1 className={"l-b-m"}>Nos Partenaires</h1>
                     <div className={"card-list"}>
                         {partenaireDatas.map(partenaireData =>
                         <div>
@@ -49,7 +49,7 @@ const Partenaires = () => {
         return (
             <div className={"contenu"}>
                 <Menu></Menu>
-                <h1>Nos Partenaires</h1>
+                <h1 className={"l-b-m"}>Nos Partenaires</h1>
                     <div className={"card-list"}>
                         {partenaireDatas.map(partenaireData =>
                         <div>

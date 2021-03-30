@@ -9,14 +9,14 @@ function FormRegister(props){
     return(
         <div className={"contenu"}>
             <Menu></Menu>
+            <h1 className={"l-b-m"}>S’inscrire avec :</h1>
             <div className={"register-option"}>
-                <h1>S’inscrire avec :</h1>
                 <button className={"Google-button"}>Google</button>
                 <button className={"Facebook-button"}>Facebook</button>
             </div>
             <hr></hr>
-            <form action="#" onSubmit={props.onSignup} className={"register-form"}>
-                <h2>Inscription</h2>
+            <h1 className={"l-b-m"}>Inscription</h1>
+            <form action="#" onSubmit={props.onSignup} className={"register-form register"}>
                 <input type="text" name="nom" placeholder="Votre nom"></input>
                 <input type="text" name="prenom" placeholder="Votre prénom"></input>
                 <input type="email" id="email" ref={props.emailRef} name="email" placeholder="Votre adresse mail"></input>

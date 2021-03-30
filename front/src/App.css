@@ -852,7 +852,7 @@ user-select: none;
 }
 
 
-.h-programmes{
+.h1m{
   position: absolute;
   left: 6.4%;
   right: 19.73%;
@@ -863,10 +863,8 @@ user-select: none;
   font-weight: bold;
   font-size: 24px;
   line-height: 100%;
-
   text-align: center;
   font-feature-settings: 'pnum' on, 'lnum' on;
-  
   color: #000000;
 }
 
@@ -876,17 +874,6 @@ user-select: none;
   left: 24px;
   right: 123px;
   top: 671px;
- position: absolute;  
-  font-family: Luciole-Bold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 100%;
-
-  text-align: center;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-  
-  color: #000000; 
 }
 
 
@@ -1392,10 +1379,19 @@ div.contenu.cookies {
 
 div.contenu.cookies h1{
   margin-bottom: 12px;
+  position:initial;
+  text-align: left;
 }
 
 div.contenu.cookies h2{
   margin-bottom: 4px;
+  font-family: Luciole-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+div.contenu.cookies h3{
+  margin-left: 0px;
 }
 
 div.contenu.cookies ul{
@@ -1413,8 +1409,16 @@ div.contenu.cookies ul li:before{
   margin-left: -1em;
 }
 
+/* Font style */
 
-
+.l-b-m{
+  font-family: Luciole;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  margin-left: 24px;
+}
 
 
 
@@ -1943,7 +1947,7 @@ hr {
   color: var(--darkGrey);
   margin-bottom: 15px;
 }
-.register-form input:last-child {
+.register-form.register input:last-child {
   font-family: Luciole;
   font-style: normal;
   font-size: 16px;
@@ -1963,7 +1967,7 @@ hr {
 -----------------------*/
 
 .login-form {
-  margin: 35px 24px;
+  margin: 15px 24px 35px 24px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -2039,10 +2043,11 @@ hr {
   margin: 5vh 7vw;
 }
 .mention-legales div {
-  margin-bottom: 10vh;
+  margin-bottom: 7vh;
 }
 .mention-legales div h2 {
-  margin-bottom: 7vh;
+  margin-bottom: 4vh;
+  margin-left: 0px;
 }
 .mention-legales div p {
   font-family: Luciole;
