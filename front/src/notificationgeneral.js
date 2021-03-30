@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Info()  {
+export default function InfoGeneral()  {
     let [infoDatas, setInfoDatas] = useState([]);
     let monInfo = [];
     useEffect(() => {
@@ -17,12 +17,12 @@ export default function Info()  {
 
             return (
                 <div> 
-                    <div className={"conteneur-notif"}>
+                    <div className={"conteneur-general"}>
                 {infoDatas.map(infoData =>
                     <div>
     
     
-                        <div className={"card-notif"}>
+                        <div className={"card-general"}>
                             <p> {infoData.titre}</p>
                             <a href={"./infosFAQ"}> <img src="https://svgshare.com/i/Vcr.svg"/> </a>
                         </div>
