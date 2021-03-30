@@ -2157,3 +2157,55 @@ hr {
   height: 60px;
   overflow: hidden;
 }
+
+
+
+
+
+/******** info general****/
+.card-general {
+  margin: 11px;
+  width: 343px;
+  height: 38px;
+  background-color: #EFF1F3;
+  padding: 8px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-general p {
+  font-family: Luciole;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 175%;
+  /* identical to box height, or 17px */
+  
+  letter-spacing: 0.2px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  
+}
+.card-general p::before {
+ content: url("https://svgshare.com/i/VcB.svg" ) ;
+
+ margin-right: 5px;
+ font-size: 20px;
+ color: var(--black);
+ float: left;
+}
+.card-general a {
+ text-decoration: none;
+ color: var(--black);
+ float: right;
+ position: absolute;
+ width: 20px;
+ height: 20px;
+ left: 318px;
+ top: 15px;
+}
+
+.conteneur-general {
+ height: 60px;
+ overflow: hidden;
+}

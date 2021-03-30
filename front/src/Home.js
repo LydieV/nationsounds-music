@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Carte from "./Carte";
 import CookieConsent from "react-cookie-consent";
 import Info from "./notification"
+import InfoGeneral from "./notificationgeneral"
 
 
 function Home() {
@@ -25,9 +26,10 @@ function Home() {
                 <MenuConnected disconnect={e => disconnect()}/>
                 <div className={"Notifaction-home"}>
                 <Info></Info>
+
                 </div>
                 <div className={"Notifaction-home2"}>
-                <Info></Info>
+                <InfoGeneral></InfoGeneral>
                 </div>
 
                 <div className={"programme-concert"}>
@@ -101,7 +103,7 @@ function Home() {
                 <Info></Info>
                 </div>
                 <div className={"Notifaction-home2"}>
-                <Info></Info>
+                <InfoGeneral></InfoGeneral>
                 </div>
 
                 <div className={"programme-concert"}>
