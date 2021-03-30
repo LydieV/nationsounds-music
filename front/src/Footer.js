@@ -30,6 +30,7 @@ export default function Footer()  {
             <div class="container-footer social">
                 <a href="./" class="socialimg"><img src="https://svgshare.com/i/VXS.svg" alt="lien instagram" height="1.7rem" width="1.7rem"/></a>
                 <a href="./" class="socialimg"><img src="https://svgshare.com/i/VWC.svg" alt="lien facebook" height="1.7rem" width="1.7rem"/></a>
+                <a href="./" class="socialimg"><img src="https://svgshare.com/i/Vbb.svg" alt="lien snapshat" height="1.7rem" width="1.7rem"/></a>
                 <a href="./" class="socialimg"><img src="https://svgshare.com/i/VWj.svg" alt="lien twitter" height="1.7rem" width="1.7rem"/></a>
                 <a href="./" class="socialimg"><img src="https://svgshare.com/i/VWu.svg" alt="lien youtube" height="1.7rem" width="1.7rem"/></a>
                 <a href="./" class="socialimg"><img src="https://svgshare.com/i/VXc.svg" alt="lien linkedin" height="1.7rem" width="1.7rem"/></a>                
