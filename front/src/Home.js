@@ -24,13 +24,12 @@ function Home() {
         return(
             <div className={"homepage"}>
                 <MenuConnected disconnect={e => disconnect()}/>
-                <div className={"Notifaction-home"}>
-                <Info></Info>
-
-                </div>
-                <div className={"Notifaction-home2"}>
-                <InfoGeneral></InfoGeneral>
-                </div>
+                    <div className={"Notifaction-home"}>
+                        <Info></Info>
+                    </div>
+                    <div className={"Notifaction-home2"}>
+                        <InfoGeneral></InfoGeneral>
+                    </div>
 
                 <div className={"programme-concert"}>
                 <a href='./programme'>
