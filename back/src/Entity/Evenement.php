@@ -82,6 +82,13 @@ class Evenement
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="string", length=555, nullable=true)
+     * 
+     * @Groups({"evenement:list", "evenement:item"})
+     */
+    private $img;
+
     public function __construct()
     {
         $this->artiste = new ArrayCollection();
@@ -184,6 +191,18 @@ class Evenement
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getImg(): ?string
+    {
+        return $this->img;
+    }
+
+    public function setImg(?string $img): self
+    {
+        $this->img = $img;
 
         return $this;
     }
