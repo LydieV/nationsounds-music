@@ -442,7 +442,9 @@ user-select: none;
   font-weight: 600;
 }
 
-
+.errorDedicaces{
+  margin-top: 4vh;
+}
 
 
 
@@ -1837,6 +1839,10 @@ div.contenu.cookies ul li:before{
   border-radius: 8px;
   border: none;
   margin: 10px;
+}
+
+.textareaContact{
+  resize: none;
 }
 
 hr {

@@ -51,7 +51,14 @@ const Artistes = () => {
         if(name === '' || style === '' ){
             alert("Remplissez tous les champs de l'artiste");
         } else {
-            axios.put('https://localhost:8000/artiste/'+id+'/edit', {artiste});
+            axios.put('https://localhost:8000/artiste/'+id+'/edit', {
+                data: {artiste},
+                headers: { Authorization: `Bearer ${artiste.token}` } 
+            }).then((response) => {
+                console.log(response);
+              }, (error) => {
+                console.log(error);
+              });
         }
     }
 
@@ -121,11 +128,6 @@ const Artistes = () => {
                         )}
                     </div>    
                 )
-          //  } else {
-          //      return (
-           //         <Redirect to={'/'} />
-         //       )
-         //   }   
         } else {
             return (
                 <Redirect to={'/'} />

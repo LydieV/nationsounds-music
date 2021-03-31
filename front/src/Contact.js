@@ -23,7 +23,7 @@ export default function Contact(){
                 <div className={"contact-form"}>
                     <input type="email" name="email" placeholder="Votre adresse mail"></input>
                     <input type="text" name="sujet" placeholder="Sujet de votre message"></input>
-                    <textarea type="textarea" name="message" placeholder="Votre message"></textarea>
+                    <textarea type="textarea" className={"textareaContact"} name="message" placeholder="Votre message"></textarea>
                     <button>Envoyer</button>
                 </div>
                 <hr></hr>
@@ -54,7 +54,7 @@ export default function Contact(){
                     <h1>Contactez-nous ! </h1>
                     <input type="email" name="email" placeholder="Votre adresse mail"></input>
                     <input type="text" name="sujet" placeholder="Sujet de votre message"></input>
-                    <textarea type="textarea" name="message" placeholder="Votre message"></textarea>
+                    <textarea type="textarea" name="message" className={"textareaContact"} placeholder="Votre message"></textarea>
                     <button>Envoyer</button>
                 </div>
                 <hr></hr>
