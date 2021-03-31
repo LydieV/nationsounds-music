@@ -110,7 +110,7 @@ const Programme = () => {
                             
                             <Tabs>
                             <div title="Concerts">
-                                    <div class="cardsProgramme">
+                                    <div className={"cardsProgramme"}>
 
                                     {evenementDatas.map(evenementData =>
                                         <div className={"cardProgramme"}>
@@ -138,8 +138,8 @@ const Programme = () => {
             
                                 </div>
                                 <div title="Dédicaces">
-                                    <div>
-                                        <p> dédicace</p>
+                                    <div className={"errorDedicaces"}>
+                                        <p> Pas de dédicaces prévues pour le moment.</p>
                                     </div>
                                 </div>
                             </Tabs>

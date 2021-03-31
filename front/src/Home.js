@@ -6,8 +6,8 @@ import {Redirect} from 'react-router-dom';
 import Footer from "./Footer";
 import Carte from "./Carte";
 import CookieConsent from "react-cookie-consent";
-import Info from "./notification"
-import InfoGeneral from "./notificationgeneral"
+import Info from "./notification";
+import InfoGeneral from "./notificationgeneral";
 
 
 function Home() {

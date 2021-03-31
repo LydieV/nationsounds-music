@@ -442,7 +442,9 @@ user-select: none;
   font-weight: 600;
 }
 
-
+.errorDedicaces{
+  margin-top: 4vh;
+}
 
 
 
@@ -1783,6 +1785,7 @@ div.contenu.cookies ul li:before{
   justify-content: space-around;
   margin: 2vh;
   margin-bottom: 40px;
+  margin-top: 28vh;
 }
 .contact-form h1 {
   margin-bottom: 18px;
@@ -1837,6 +1840,10 @@ div.contenu.cookies ul li:before{
   border-radius: 8px;
   border: none;
   margin: 10px;
+}
+
+.textareaContact{
+  resize: none;
 }
 
 hr {

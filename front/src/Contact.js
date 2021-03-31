@@ -4,6 +4,8 @@ import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
 import Footer from "./Footer";
+import Info from "./notification";
+import InfoGeneral from "./notificationgeneral";
 
 export default function Contact(){
     const [cookies, removeCookie] = useCookies(['login']);
@@ -19,11 +21,17 @@ export default function Contact(){
         return(
             <div className={"contenu"}>
                 <MenuConnected disconnect={e => disconnect()}/>
+                <div className={"Notifaction-home"}>
+                        <Info></Info>
+                    </div>
+                    <div className={"Notifaction-home2"}>
+                        <InfoGeneral></InfoGeneral>
+                    </div>
                 <h1 className={"l-b-m"}>Contactez-nous !</h1>
                 <div className={"contact-form"}>
                     <input type="email" name="email" placeholder="Votre adresse mail"></input>
                     <input type="text" name="sujet" placeholder="Sujet de votre message"></input>
-                    <textarea type="textarea" name="message" placeholder="Votre message"></textarea>
+                    <textarea type="textarea" className={"textareaContact"} name="message" placeholder="Votre message"></textarea>
                     <button>Envoyer</button>
                 </div>
                 <hr></hr>
@@ -50,11 +58,17 @@ export default function Contact(){
         return(
             <div className={"contenu"}>
                 <Menu></Menu>
+                <div className={"Notifaction-home"}>
+                        <Info></Info>
+                    </div>
+                    <div className={"Notifaction-home2"}>
+                        <InfoGeneral></InfoGeneral>
+                    </div>
                 <div className={"contact-form"}>
                     <h1>Contactez-nous ! </h1>
                     <input type="email" name="email" placeholder="Votre adresse mail"></input>
                     <input type="text" name="sujet" placeholder="Sujet de votre message"></input>
-                    <textarea type="textarea" name="message" placeholder="Votre message"></textarea>
+                    <textarea type="textarea" name="message" className={"textareaContact"} placeholder="Votre message"></textarea>
                     <button>Envoyer</button>
                 </div>
                 <hr></hr>
