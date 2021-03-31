@@ -5,6 +5,7 @@ import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
 import Tabs from "./Tabs";
+import Time from "react-time-format";
 
 const Programme = () => {
     const [cookies, removeCookie] = useCookies(['login']);
@@ -72,7 +73,7 @@ const Programme = () => {
                                                 <img src="https://www.leparisien.fr/resizer/3egtAY3IEYZZEzy1uoQ0R2WIaYo=/932x582/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/WGW3K3BZCMUR2JFV7HBT6VULME.jpg" alt="img1"/>
                                             </div>
                                             <div className={"contenuCard"}>
-                                                <p className={"horaireCard"}>{evenementData.horaireDebut}</p>
+                                                <p className={"horaireCard"}><Time value={evenementData.horaireDebut} format="YYYY/MM/DD"/> </p>
                                                 {artisteDatas.map(artisteData =>
                                                     <div>
                                                         {
@@ -117,7 +118,7 @@ const Programme = () => {
                                                 <img src="https://www.leparisien.fr/resizer/3egtAY3IEYZZEzy1uoQ0R2WIaYo=/932x582/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/WGW3K3BZCMUR2JFV7HBT6VULME.jpg" alt="img1"/>
                                             </div>
                                             <div className={"contenuCard"}>
-                                                <p className={"horaireCard"}>{evenementData.horaireDebut}</p>
+                                                <p className={"horaireCard"}><Time value={evenementData.horaireDebut} format="HH:MM"/></p>
                                                 {artisteDatas.map(artisteData =>
                                                     <div>
                                                         {
