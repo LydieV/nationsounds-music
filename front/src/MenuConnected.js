@@ -48,10 +48,13 @@ export default function MenuConnected(props){
                     <li> 
                         <Link to={'/partenaires'}> Partenaires </Link>
                     </li>
-                    <li>
-                        <Link to={'/photos'}> Photos </Link>
-                    </li>
+                    
                 </ul>
+                <ul>
+                    <a href="https://instagram.com " target="_blank" class={"instagram-menu"}><img src="https://svgshare.com/i/VXS.svg"  alt="lien instagram" /></a>
+                    <a href="https://facebook.com" target="_blank" class={"facebook-menu"}><img src="https://svgshare.com/i/VWC.svg" alt="lien facebook" /></a>
+                    <a href="https://twitter.com" target="_blank" class={"twitter-menu"}><img src="https://svgshare.com/i/VWj.svg" alt="lien twitter" /></a>
+                    </ul>
             </div>
 
           </div>

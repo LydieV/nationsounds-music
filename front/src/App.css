@@ -319,13 +319,13 @@ user-select: none;
 -----------------------*/
 
 .deconnexion {
-  background-image:url('images/icone_deconnexion.png');
+  background-image:url('https://svgshare.com/i/VeJ.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
-  height:5vh;
+  height:4.5vh;
   margin-right: 2vw;
-  margin-top: 3.5vh;
+  margin-top: 3vh;
 }
 
 /*-----------------------
@@ -679,7 +679,7 @@ z-index: 2;
 #nav-content {
   margin-top: 5em;
   z-index: 1;
-  padding: 3.125em;
+  padding: 3.825em;
   width: 90%;
   max-width: 15.625em;
   position: absolute;
