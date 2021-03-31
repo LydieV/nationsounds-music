@@ -1730,14 +1730,18 @@ div.contenu.cookies ul li:before{
 /*-----------------------
     Info
 -----------------------*/
-.dot-info {
-  margin-top: -7vh;
-}
 .dot-info p::before {
   content: "• ";
   font-size: 2rem;
   color: var(--pink);
 }
+
+.dot-infoGen p::before {
+  content: "• ";
+  font-size: 2rem;
+  color: var(--magenta);
+}
+
 /*
 .dot-info p:last-child {
   margin-top: -3vh;
@@ -1760,6 +1764,12 @@ div.contenu.cookies ul li:before{
   content: "• ";
   font-size: 2rem;
   color: var(--pink);
+}
+
+.card-infoGen h3::before {
+  content: "• ";
+  font-size: 2rem;
+  color: var(--magenta);
 }
 
 /*-----------------------

@@ -47,19 +47,35 @@ export default function Info()  {
         )
     } else {
         return (
-            <div className={"contenu"}>
+            <div>
                 <Menu></Menu>
-                <div className={"dot-info"}>
-                    <p>Informations importantes</p>
-                    
+
+                <div>
+                    <div className={"dot-info"}>
+                        <p>Informations importantes</p>
+                    </div>
+
+                    <div className={"dot-info dot-infoGen"}>
+                        <p>Informations générales</p>
+                    </div>
                 </div>
                 
                 {infoDatas.map(infoData =>
                     <div>
-                        <div className={"card-info"}>
-                            <h3>{infoData.titre}</h3>
-                            <p>{infoData.description}</p> 
-                        </div>
+                        {
+                            infoData.type === "urgente" ?
+                                <div className={"card-info"}>
+                                    <h3>{infoData.titre}</h3>
+                                    <p>{infoData.description}</p> 
+                                </div>
+
+                            : 
+                            <div className={"card-info card-infoGen"}>
+                                    <h3>{infoData.titre}</h3>
+                                    <p>{infoData.description}</p> 
+                            </div>
+                        }
+                        
     
                     </div>
                 )}
