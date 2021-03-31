@@ -47,9 +47,7 @@ export default function Menu()  {
                     <li> 
                         <Link to={'/partenaires'}> Partenaires </Link>
                     </li>
-                    <li>
-                        <Link to={'/photos'}> Photos </Link>
-                    </li>
+                
                     </ul>
                     <ul>
                     <a href="https://instagram.com " target="_blank" class={"instagram-menu"}><img src="https://svgshare.com/i/VXS.svg"  alt="lien instagram" /></a>

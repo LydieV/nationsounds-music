@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function Info()  {
     let [infoDatas, setInfoDatas] = useState([]);
-
+    let monInfo = [];
     useEffect(() => {
         axios
             .get('https://localhost:8000/api/infos')
@@ -14,23 +14,31 @@ export default function Info()  {
     }, []);
 
 
-    return (
-        <div> 
-            <div className={"conteneur-notif"}>
+
+            return (
+                <div> 
+                    <div className={"conteneur-notif"}>
                 {infoDatas.map(infoData =>
                     <div>
-                        {
-                            infoData.type === "urgente" ?
-                            
-                                <div className={"card-notif"}>
-                                    <p> {infoData.titre}</p>
-                                    <a href={"./infosFAQ"}> <img src="https://svgshare.com/i/Vcr.svg"/> </a>
-                                </div>
-                            :''
-                        }
+    
+    
+                        <div className={"card-notif"}>
+                            <p> {infoData.titre}</p>
+                            <a href={"./infosFAQ"}> <img src="https://svgshare.com/i/Vcr.svg"/> </a>
+                        </div>
+    
+    
                     </div>
                 )}
+                </div>
             </div>
-        </div>    
-    )
+                
+            )
+
+
+            
+
+
+
+
 }
