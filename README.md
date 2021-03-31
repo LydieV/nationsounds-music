@@ -5,6 +5,9 @@
 => npm install axios
 => npm install react-router-dom
 => npm install cookies
+=> npm install 
+=> npm install react-time-format
+=> npm install react-cookie-consent
 
 ## For back :
 => composer require symfony/maker-bundle
