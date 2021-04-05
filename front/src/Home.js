@@ -32,25 +32,30 @@ function Home() {
                     </div>
 
                 <div className={"programme-concert"}>
-                <a href='./programme'>
-                 <button class={"btn-programme1"}><p>THE</p><p><br></br> WEEKND</p></button>
-                </a>
-                <a href='./programme'>
-                 <button class={"btn-programme2"}><p>AYA</p><p><br></br>NAKAMURA</p></button>
-                </a>
-                <a href='./programme'>
-                 <button class={"btn-programme3"}><p>DAVID</p><p><br></br>GUETTA</p></button>
-                </a>
+                    <a href='./programme'>
+                        <button className={"btn-programme1"}><p>THE</p><p><br></br> WEEKND</p></button>
+                    </a>
+                    <a href='./programme'>
+                        <button className={"btn-programme2"}><p>AYA</p><p><br></br>NAKAMURA</p></button>
+                    </a>
+                    <a href='./programme'>
+                        <button className={"btn-programme3"}><p>DAVID</p><p><br></br>GUETTA</p></button>
+                    </a>
                 </div>
+
                 <h1 className={"h1m"}>Programmes concerts</h1>
                 <h2 className={"h-textbillet"}>Toujours pas de billets ?</h2>
+                
                 <a href='./billetterie'>
-                 <button class={"btn-billet"}>Accéder à la <br></br>billeterie</button>
+                 <button className={"btn-billet"}>Accéder à la <br></br>billeterie</button>
                 </a>
+                
                 <h1 className={"h1m h-plan"}>Découvrez le plan</h1>
+                
                 <div className={"map-home"}>
-                <Carte></Carte>
+                    <Carte></Carte>
                 </div>
+
                 <CookieConsent
                     onAccept={() => {
                         alert("C'est ok tu as accepté les cookies");
@@ -107,19 +112,19 @@ function Home() {
 
                 <div className={"programme-concert"}>
                 <a href='./programme'>
-                 <button class={"btn-programme1"}><p>THE</p><p><br></br> WEEKND</p></button>
+                 <button className={"btn-programme1"}><p>THE</p><p><br></br> WEEKND</p></button>
                 </a>
                 <a href='./programme'>
-                 <button class={"btn-programme2"}><p>AYA</p><p><br></br>NAKAMURA</p></button>
+                 <button className={"btn-programme2"}><p>AYA</p><p><br></br>NAKAMURA</p></button>
                 </a>
                 <a href='./programme'>
-                 <button class={"btn-programme3"}><p>DAVID</p><p><br></br>GUETTA</p></button>
+                 <button className={"btn-programme3"}><p>DAVID</p><p><br></br>GUETTA</p></button>
                 </a>
                 </div>
                 <h1 className={"h1m"}>Programmes concerts</h1>
                 <h2 className={"h-textbillet"}>Toujours pas de billets ?</h2>
                 <a href='./billetterie'>
-                 <button class={"btn-billet"}>Accéder à la <br></br>billeterie</button>
+                 <button className={"btn-billet"}>Accéder à la <br></br>billeterie</button>
                 </a>
                 <h1 className={"h1m h-plan"}>Découvrez le plan</h1>
                 <div className={"map-home"}>

@@ -18,7 +18,7 @@ export default function Menu()  {
               <span className={"icon-bar"}></span>
             </div>
 
-            <div id="nav-content" tabindex="0">
+            <div id="nav-content" tabIndex="0">
                 <ul className={"menu"}>
                     <li>
                         <Link to={'/'}> Accueil </Link>
@@ -50,9 +50,9 @@ export default function Menu()  {
                 
                     </ul>
                     <ul>
-                    <a href="https://instagram.com " target="_blank" class={"instagram-menu"}><img src="https://svgshare.com/i/VXS.svg"  alt="lien instagram" /></a>
-                    <a href="https://facebook.com" target="_blank" class={"facebook-menu"}><img src="https://svgshare.com/i/VWC.svg" alt="lien facebook" /></a>
-                    <a href="https://twitter.com" target="_blank" class={"twitter-menu"}><img src="https://svgshare.com/i/VWj.svg" alt="lien twitter" /></a>
+                    <a href="https://instagram.com " target="_blank" className={"instagram-menu"}><img src="https://svgshare.com/i/VXS.svg"  alt="lien instagram" /></a>
+                    <a href="https://facebook.com" target="_blank" className={"facebook-menu"}><img src="https://svgshare.com/i/VWC.svg" alt="lien facebook" /></a>
+                    <a href="https://twitter.com" target="_blank" className={"twitter-menu"}><img src="https://svgshare.com/i/VWj.svg" alt="lien twitter" /></a>
                     </ul>
                 </div>
                     

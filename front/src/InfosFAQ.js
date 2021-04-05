@@ -4,7 +4,6 @@ import axios from "axios";
 import Tabs from "./Tabs";
 import Faq from "./Faq";
 import Info from "./Info";
-import Notification from "./notification";
 import Menu from "./Menu";
 import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
@@ -53,7 +52,6 @@ const InfosFAQ = () => {
         return (
             <div className={"contenu"}>
                 <Menu></Menu>
-                {/*JSON.stringify(infosfaqDatas)*/}
                 <div className={"blockSwitchProgramme"}>
                 <Tabs>
                     <div title="Foire aux Questions" > 
