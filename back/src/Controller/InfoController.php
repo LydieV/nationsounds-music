@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
  * @Route("/info")
@@ -27,6 +28,7 @@ class InfoController extends AbstractController
 
     /**
      * @Route("/new", name="info_new", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN", message="Vous n'avez pas les droits")
      */
     public function new(Request $request): Response
     {
@@ -60,6 +62,7 @@ class InfoController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="info_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN", message="Vous n'avez pas les droits")
      */
     public function edit(Request $request, Info $info): Response
     {
@@ -80,6 +83,7 @@ class InfoController extends AbstractController
 
     /**
      * @Route("/{id}", name="info_delete", methods={"DELETE"})
+     * @IsGranted("ROLE_ADMIN", message="Vous n'avez pas les droits")
      */
     public function delete(Request $request, Info $info): Response
     {
