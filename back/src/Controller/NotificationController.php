@@ -31,6 +31,7 @@ class NotificationController extends AbstractController
 
     /**
      * @Route("/new", name="notification_new", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN", message="Vous n'avez pas les droits")
      */
     public function new(Request $request): Response
     {
@@ -65,6 +66,7 @@ class NotificationController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="notification_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN", message="Vous n'avez pas les droits")
      */
     public function edit($id, NotificationRepository $notificationRepository, Request $request, Notification $notification): Response
     {
@@ -86,6 +88,7 @@ class NotificationController extends AbstractController
 
     /**
      * @Route("/{id}", name="notification_delete", methods={"DELETE"})
+     * @IsGranted("ROLE_ADMIN", message="Vous n'avez pas les droits")
      */
     public function delete(Request $request, Notification $notification): Response
     {
