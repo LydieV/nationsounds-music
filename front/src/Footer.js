@@ -4,16 +4,16 @@ import {Link} from "react-router-dom";
 
 export default function Footer()  {
     return (
-        <div class="footer">
+        <div className={"footer"}>
 
-            <div class="container-footer logo-footer">
+            <div className={"container-footer logo-footer"}>
                 <a href="./"><img src="https://svgshare.com/i/VPB.svg" alt="logo"/></a>
             </div>
 
             <hr></hr>
 
-            <div class="container-footer lien-footer">
-                <ul class="liste-lien">
+            <div className={"container-footer lien-footer"}>
+                <ul className={"liste-lien"}>
                     <li><Link to={'/programme'}> Programmes </Link></li>
                     <li><Link to={'/billetterie'}> Billetterie </Link></li>
                     <li><Link to={'/infosFAQ'}> Foire aux questions </Link></li>
@@ -27,20 +27,20 @@ export default function Footer()  {
 
             <hr></hr>
 
-            <div class="container-footer social">
-                <a href="./" class="socialimg"><img src="https://svgshare.com/i/VXS.svg" alt="lien instagram" height="1.7rem" width="1.7rem"/></a>
-                <a href="./" class="socialimg"><img src="https://svgshare.com/i/VWC.svg" alt="lien facebook" height="1.7rem" width="1.7rem"/></a>
-                <a href="./" class="socialimg"><img src="https://svgshare.com/i/Vbb.svg" alt="lien snapshat" height="1.7rem" width="1.7rem"/></a>
-                <a href="./" class="socialimg"><img src="https://svgshare.com/i/VWj.svg" alt="lien twitter" height="1.7rem" width="1.7rem"/></a>
-                <a href="./" class="socialimg"><img src="https://svgshare.com/i/VWu.svg" alt="lien youtube" height="1.7rem" width="1.7rem"/></a>
-                <a href="./" class="socialimg"><img src="https://svgshare.com/i/VXc.svg" alt="lien linkedin" height="1.7rem" width="1.7rem"/></a>                
+            <div className={"container-footer social"}>
+                <a href="./" className={"socialimg"}><img src="https://svgshare.com/i/VXS.svg" alt="lien instagram" height="1.7rem" width="1.7rem"/></a>
+                <a href="./" className={"socialimg"}><img src="https://svgshare.com/i/VWC.svg" alt="lien facebook" height="1.7rem" width="1.7rem"/></a>
+                <a href="./" className={"socialimg"}><img src="https://svgshare.com/i/Vbb.svg" alt="lien snapshat" height="1.7rem" width="1.7rem"/></a>
+                <a href="./" className={"socialimg"}><img src="https://svgshare.com/i/VWj.svg" alt="lien twitter" height="1.7rem" width="1.7rem"/></a>
+                <a href="./" className={"socialimg"}><img src="https://svgshare.com/i/VWu.svg" alt="lien youtube" height="1.7rem" width="1.7rem"/></a>
+                <a href="./" className={"socialimg"}><img src="https://svgshare.com/i/VXc.svg" alt="lien linkedin" height="1.7rem" width="1.7rem"/></a>                
             </div>
 
             <hr></hr>
 
-            <div class="container-footer newsletter">
+            <div className={"container-footer newsletter"}>
                 {/*<Formnews></Formnews>*/}
-                <form className={"formsearch"} class="register-form">           
+                <form className={"formsearch"} className={"register-form"}>           
                     <label>
                         Inscrivez-vous à la newsletter
                     </label>
@@ -50,7 +50,7 @@ export default function Footer()  {
                 </form>
             </div>
 
-            <div class="container-footer copyright">
+            <div className={"container-footer copyright"}>
                 <p>Nation Sounds 2021 © Tous droits réservés</p>
             </div>
 
