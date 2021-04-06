@@ -23,8 +23,8 @@
                 <td>{{ info.description }}</td>
                 <td>{{ info.type }}</td>
                 <td>
-                    <a href="{{ path('info_show', {'id': info.id}) }}">show</a>
-                    <a href="{{ path('info_edit', {'id': info.id}) }}">edit</a>
+                    <a href="{{ path('info_show', {'id': info.id}) }}" class="badge badge-primary text-uppercase">voir</a>
+                    <a href="{{ path('info_edit', {'id': info.id}) }}" class="badge badge-primary text-uppercase">modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +35,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('info_new') }}">Create new</a>
+    <a href="{{ path('info_new') }}" class="badge badge-primary text-uppercase">Créer une nouvelle info</a>
 {% endblock %}
