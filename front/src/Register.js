@@ -4,27 +4,40 @@ import {Redirect, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import {useCookies, withCookies} from 'react-cookie';
 import Menu from "./Menu";
+import Info from "./notification";
+import InfoGeneral from "./notificationgeneral";
 
 function FormRegister(props){
     return(
         <div className={"contenu"}>
             <Menu></Menu>
-            <h1 className={"l-b-m"}>S’inscrire avec :</h1>
-            <div className={"register-option"}>
-                <button className={"Google-button"}>Google</button>
-                <button className={"Facebook-button"}>Facebook</button>
+
+            <div className={"Notifaction-home"}>
+                <Info></Info>
             </div>
-            <hr></hr>
-            <h1 className={"l-b-m"}>Inscription</h1>
-            <form action="#" onSubmit={props.onSignup} className={"register-form register"}>
-                <input type="text" name="nom" placeholder="Votre nom"></input>
-                <input type="text" name="prenom" placeholder="Votre prénom"></input>
-                <input type="email" id="email" ref={props.emailRef} name="email" placeholder="Votre adresse mail"></input>
-                <input type="password" ref={props.passwordRef} name="password" placeholder="Votre mot de passe"></input>
-                <input type="password" ref={props.password2Ref} name="confirmpassword" placeholder="Confirmez votre mot de passe"></input>
-                <p>En cliquant sur s’inscrire, vous acceptez notre politique de gestion des données.</p>
-                <input type={"submit"} value={"S'inscrire"}/>
-            </form>
+            <div className={"Notifaction-home2"}>
+                <InfoGeneral></InfoGeneral>
+            </div>
+
+            <div className={"compte"}>
+                <h1 className={"l-b-m"}>S’inscrire avec :</h1>
+                <div className={"register-option"}>
+                    <button className={"Google-button"}>Google</button>
+                    <button className={"Facebook-button"}>Facebook</button>
+                </div>
+                <hr></hr>
+                <h1 className={"l-b-m"}>Inscription</h1>
+                <form action="#" onSubmit={props.onSignup} className={"register-form register"}>
+                    <input type="text" name="nom" placeholder="Votre nom"></input>
+                    <input type="text" name="prenom" placeholder="Votre prénom"></input>
+                    <input type="email" id="email" ref={props.emailRef} name="email" placeholder="Votre adresse mail"></input>
+                    <input type="password" ref={props.passwordRef} name="password" placeholder="Votre mot de passe"></input>
+                    <input type="password" ref={props.password2Ref} name="confirmpassword" placeholder="Confirmez votre mot de passe"></input>
+                    <p>En cliquant sur s’inscrire, vous acceptez notre politique de gestion des données.</p>
+                    <input type={"submit"} value={"S'inscrire"}/>
+                </form>
+            </div>
+            
         </div>
 
     );
