@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Info{% endblock %}
+{% block title %}Modifier Info{% endblock %}
 
 {% block body %}
-    <h1>Edit Info</h1>
+    <div class="container">
+        <h1>Modifier Info</h1>
 
-    {{ include('info/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('info/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <a href="{{ path('info_index') }}">back to list</a>
+        <a href="{{ path('info_index') }}" class="badge badge-primary text-uppercase">Retour à la liste</a>
 
-    {{ include('info/_delete_form.html.twig') }}
+        {{ include('info/_delete_form.html.twig') }}
+    </div>
 {% endblock %}
