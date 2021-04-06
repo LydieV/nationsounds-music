@@ -17,5 +17,6 @@
 => composer require debug
 => composer require security
 => composer require form
+=> composer require symfony/security-bundle
 
 Copier / coller .env => .env.local et mettre à jour avec bonne BDD.

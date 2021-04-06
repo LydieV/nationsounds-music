@@ -27,7 +27,7 @@ export default function Faq()  {
 
     if (cookies.login && cookies.login.email){
         return(
-            <div className={"contenu"}>
+            <div>
                 <MenuConnected disconnect={e => disconnect()}/>
                 {infosfaqDatas.map(infosfaqData =>
                     <div className={"card-faq"}>
@@ -39,7 +39,7 @@ export default function Faq()  {
         )
     } else {
         return (
-            <div className={"contenu"}>
+            <div>
                 <Menu></Menu>
                 {infosfaqDatas.map(infosfaqData =>
                     <div className={"card-faq"}>

@@ -6,7 +6,7 @@ import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
 import axios from "axios";
 
-export default function Info()  {
+export default function ListInfo()  {
     let [infoDatas, setInfoDatas] = useState([]);
     const [cookies, removeCookie] = useCookies(['login']);
 
@@ -36,10 +36,20 @@ export default function Info()  {
                 
                 {infoDatas.map(infoData =>
                     <div>
-                        <div className={"card-info"}>
-                            <h3>{infoData.titre}</h3>
-                            <p>{infoData.description}</p> 
-                        </div>
+                        {
+                            infoData.type === "urgente" ?
+                                <div className={"card-info"}>
+                                    <h3>{infoData.titre}</h3>
+                                    <p>{infoData.description}</p> 
+                                </div>
+
+                            : 
+                            <div className={"card-info card-infoGen"}>
+                                    <h3>{infoData.titre}</h3>
+                                    <p>{infoData.description}</p> 
+                            </div>
+                        }
+                        
     
                     </div>
                 )}

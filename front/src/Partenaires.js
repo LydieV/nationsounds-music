@@ -6,6 +6,8 @@ import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
 import Footer from "./Footer";
+import Info from "./notification";
+import InfoGeneral from "./notificationgeneral";
 
 const Partenaires = () => {
     const [cookies, removeCookie] = useCookies(['login']);
@@ -49,18 +51,27 @@ const Partenaires = () => {
         return (
             <div className={"contenu"}>
                 <Menu></Menu>
-                <h1 className={"l-b-m"}>Nos Partenaires</h1>
-                    <div className={"card-list"}>
-                        {partenaireDatas.map(partenaireData =>
-                        <div>
-                            <div className={"card-partenaire"}>
-                                <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
-                                <p className={"text-partenaire"}>{partenaireData.nom}</p>
-                            </div>
-                        </div>
-                        )}
-                    <Footer></Footer>
+
+                <div className={"Notifaction-home"}>
+                        <Info></Info>
                     </div>
+                    <div className={"Notifaction-home2"}>
+                        <InfoGeneral></InfoGeneral>
+                </div>
+                <div className={"partenaires"}>
+                    <h1 className={"l-b-m"}>Nos Partenaires</h1>
+                        <div className={"card-list"}>
+                            {partenaireDatas.map(partenaireData =>
+                            <div>
+                                <div className={"card-partenaire"}>
+                                    <img className={"img-partenaire"} src={partenaireData.image} alt="img-partenaire"></img>
+                                    <p className={"text-partenaire"}>{partenaireData.nom}</p>
+                                </div>
+                            </div>
+                            )}
+                            <Footer></Footer>
+                        </div>
+                </div>
             </div>
         )
     }

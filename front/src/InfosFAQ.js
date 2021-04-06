@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Tabs from "./Tabs";
 import Faq from "./Faq";
-import Info from "./Info";
-import Notification from "./notification";
+import ListInfo from "./Info";
 import Menu from "./Menu";
 import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
 import Footer from "./Footer";
+import Info from "./notification";
+import InfoGeneral from "./notificationgeneral";
 
 const InfosFAQ = () => {
     const [cookies, removeCookie] = useCookies(['login']);
@@ -34,14 +35,22 @@ const InfosFAQ = () => {
         return(
             <div className={"contenu"}>
                 <MenuConnected disconnect={e => disconnect()}/>
+
+                <div className={"Notifaction-home"}>
+                    <Info></Info>
+                </div>
+                <div className={"Notifaction-home2"}>
+                    <InfoGeneral></InfoGeneral>
+                </div>
+
                 <div className={"blockSwitchProgramme"}>
                 <Tabs>
+                    <div title="Informations">
+                            <ListInfo></ListInfo>
+                    </div>
+                    
                     <div title="Foire aux Questions" > 
                         <Faq></Faq>
-                    </div>
-    
-                    <div title="Informations">
-                        <Info></Info>
                     </div>
                 </Tabs>
 
@@ -53,16 +62,25 @@ const InfosFAQ = () => {
         return (
             <div className={"contenu"}>
                 <Menu></Menu>
-                {/*JSON.stringify(infosfaqDatas)*/}
+
+                    <div className={"Notifaction-home"}>
+                        <Info></Info>
+                    </div>
+                    <div className={"Notifaction-home2"}>
+                        <InfoGeneral></InfoGeneral>
+                    </div>
+
                 <div className={"blockSwitchProgramme"}>
                 <Tabs>
+                    <div title="Informations">
+                            <ListInfo></ListInfo>
+                    </div>
+
                     <div title="Foire aux Questions" > 
                         <Faq></Faq>
                     </div>
     
-                    <div title="Informations">
-                        <Info></Info>
-                    </div>
+                    
                 </Tabs>
 
                 </div>

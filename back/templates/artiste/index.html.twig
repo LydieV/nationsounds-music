@@ -11,7 +11,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Style</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +21,8 @@
                 <td>{{ artiste.name }}</td>
                 <td>{{ artiste.style }}</td>
                 <td>
-                    <a href="{{ path('artiste_show', {'id': artiste.id}) }}">show</a>
-                    <a href="{{ path('artiste_edit', {'id': artiste.id}) }}">edit</a>
+                    <a href="{{ path('artiste_show', {'id': artiste.id}) }}" class="badge badge-primary text-uppercase">voir</a>
+                    <a href="{{ path('artiste_edit', {'id': artiste.id}) }}" class="badge badge-primary text-uppercase">modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +33,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('artiste_new') }}">Create new</a>
+    <a href="{{ path('artiste_new') }}" class="badge badge-primary text-uppercase">Créer un nouvel artiste</a>
 {% endblock %}

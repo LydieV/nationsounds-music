@@ -4,6 +4,8 @@ import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
 import Footer from "./Footer";
+import Info from "./notification";
+import InfoGeneral from "./notificationgeneral";
 
 export default function Cookies(){
     const [cookies, removeCookie] = useCookies(['login']);
@@ -17,7 +19,7 @@ export default function Cookies(){
 
     if (cookies.login && cookies.login.email){
         return(
-            <div className={"contenu"}>
+            <div className={"contenu contenuCookies"}>
                 <MenuConnected disconnect={e => disconnect()}/>
                 <h1>Cookies</h1>
                 <h2>Qu’est-ce qu’un cookie ?</h2>
@@ -47,9 +49,17 @@ export default function Cookies(){
         )
     } else {
         return(
-            <div className={"contenu"}>
+            <div className={"contenu contenuCookies"}>
                 <div className={"contenu cookies"}>
                 <Menu></Menu>
+
+                <div className={"Notifaction-home"}>
+                    <Info></Info>
+                </div>
+                <div className={"Notifaction-home2"}>
+                    <InfoGeneral></InfoGeneral>
+                </div>
+
                 <h1 className={"h1m h-cookies"}>Cookies</h1>
                 <h2>Qu’est-ce qu’un cookie ?</h2>
                 <h3 className={"l-b-m"}>Définition des cookies</h3>

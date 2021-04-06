@@ -41,7 +41,7 @@ function App() {
             <Route exact={true} path="/artistes" component={Artistes} />
             <Route exact={true} path="/admininfo" component={AdminInfo} />
             <Route exact={true} path="/adminnotification" component={AdminNotification} />
-            <Route path="*" component={() => <p>Tu sais pas trouvé une page correcte t'es nul mec</p>} />
+            <Route path="*" component={() => <p>Erreur 404 : la page que vous cherchez n'existe pas.</p>} />
           </Switch>
         </div>
       </BrowserRouter>

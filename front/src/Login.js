@@ -5,23 +5,35 @@ import {Link} from 'react-router-dom';
 import axios from "axios";
 import {useCookies, withCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
+import Info from "./notification";
+import InfoGeneral from "./notificationgeneral";
 
 function FormLogin(props){
     return(
         <div className={"contenu"}>
             <Menu></Menu>   
-            <h1 className={"l-b-m"}>Connexion</h1>         
-            <form action="#" onSubmit={props.onSignin} className={"login-form"}>
-                <input type="email" id="email" ref={props.emailRef} name="email" placeholder="Votre adresse mail"/>
-                <input type="password" od="password" ref={props.passwordRef} name="password" placeholder="Votre mot de passe"/>
-                
-                <input type="submit" value="Se connecter"/>
-            </form>
 
-            <hr></hr>
-            <div className={"login-option"}>
-                <p>Pas encore inscrit ?</p>
-                <a href="/register">Créer un compte</a>
+            <div className={"Notifaction-home"}>
+                <Info></Info>
+            </div>
+            <div className={"Notifaction-home2"}>
+                <InfoGeneral></InfoGeneral>
+            </div>
+
+            <div className={"compte"}>
+                <h1 className={"l-b-m"}>Connexion</h1>         
+                <form action="#" onSubmit={props.onSignin} className={"login-form"}>
+                    <input type="email" id="email" ref={props.emailRef} name="email" placeholder="Votre adresse mail"/>
+                    <input type="password" od="password" ref={props.passwordRef} name="password" placeholder="Votre mot de passe"/>
+                    
+                    <input type="submit" value="Se connecter"/>
+                </form>
+
+                <hr></hr>
+                <div className={"login-option"}>
+                    <p>Pas encore inscrit ?</p>
+                    <a href="/register">Créer un compte</a>
+                </div>
             </div>
         </div>
 

@@ -28,7 +28,7 @@ export default function CarteInt(){
                     <div className={"Notifaction-home2"}>
                         <InfoGeneral></InfoGeneral>
                     </div>
-                <div class="map-carteint">
+                <div className={"map-carteint"}>
                 <Carte></Carte>
                 </div>
                 <Footer></Footer>
@@ -44,7 +44,7 @@ export default function CarteInt(){
                     <div className={"Notifaction-home2"}>
                         <InfoGeneral></InfoGeneral>
                     </div>
-                <div class="map-carteint">
+                <div className={"map-carteint"}>
                 <Carte></Carte>
                  </div>
                 <Footer></Footer>
