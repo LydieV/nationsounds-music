@@ -6,7 +6,7 @@ import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
 import axios from "axios";
 
-export default function Info()  {
+export default function ListInfo()  {
     let [infoDatas, setInfoDatas] = useState([]);
     const [cookies, removeCookie] = useCookies(['login']);
 

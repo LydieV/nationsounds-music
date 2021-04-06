@@ -345,6 +345,7 @@ user-select: none;
 .blockSwitchProgramme{
   margin-left: 2.4vw;
   margin-right: 2.4vw;
+  margin-top: 28vh;
   z-index: auto;
   position:relative
 }
@@ -384,7 +385,7 @@ user-select: none;
 .cardsProgramme{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 4vh;
 }
 
@@ -442,9 +443,16 @@ user-select: none;
   font-weight: 600;
 }
 
+.tab-content{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .errorDedicaces{
   margin-top: 4vh;
 }
+
 
 
 
@@ -1368,7 +1376,9 @@ div.footer > div.container-footer.copyright{
 }
 
 /* cookies */
-
+.contenuCookies{
+  margin-top: 28vh;
+}
 div.contenu.cookies {
   margin-left: 6vw;
   margin-right: 6vw;
@@ -1666,6 +1676,9 @@ div.contenu.cookies ul li:before{
 /*-----------------------
     Partenaire
 -----------------------*/
+.partenaires{
+  margin-top: 28vh;
+}
 .card-list {
   display: flex;
   flex-wrap: wrap;
@@ -1891,6 +1904,9 @@ hr {
 /*-----------------------
     S'inscrire
 -----------------------*/
+.compte{
+  margin-top: 27vh;
+}
 .register-option {
   display: flex;
   flex-wrap: wrap;
@@ -2057,7 +2073,7 @@ hr {
     Mentions Légales
 -----------------------*/
 .mention-legales {
-  margin: 5vh 7vw;
+  margin: 28vh 7vw;
 }
 .mention-legales div {
   margin-bottom: 7vh;

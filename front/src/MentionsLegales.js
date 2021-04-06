@@ -4,6 +4,8 @@ import MenuConnected from "./MenuConnected";
 import {useCookies} from 'react-cookie';
 import {Redirect} from 'react-router-dom';
 import Footer from "./Footer";
+import Info from "./notification";
+import InfoGeneral from "./notificationgeneral";
 
 export default function MentionsLegales(){
     const [cookies, removeCookie] = useCookies(['login']);
@@ -19,6 +21,14 @@ export default function MentionsLegales(){
         return(
             <div className={"contenu"}>
                 <MenuConnected disconnect={e => disconnect()}/>
+
+                <div className={"Notifaction-home"}>
+                    <Info></Info>
+                </div>
+                <div className={"Notifaction-home2"}>
+                    <InfoGeneral></InfoGeneral>
+                </div>
+
                 <div className={"mention-legales"}>
                     <div>
                         <h2 className={"l-b-m"}>1. PRÉSENTATION DU SITE</h2>
@@ -86,6 +96,14 @@ export default function MentionsLegales(){
         return(
             <div className={"contenu"}>
                 <Menu></Menu>
+
+                <div className={"Notifaction-home"}>
+                    <Info></Info>
+                </div>
+                <div className={"Notifaction-home2"}>
+                    <InfoGeneral></InfoGeneral>
+                </div>
+
                 <div className={"mention-legales"}>
                     <div>
                         <h2 className={"l-b-m"}>1. PRÉSENTATION DU SITE</h2>
