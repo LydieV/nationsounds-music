@@ -38,15 +38,19 @@ export default function CarteInt(){
         return(
             <div className="contenu">
                 <Menu></Menu>
+
                 <div className={"Notifaction-home"}>
-                        <Info></Info>
-                    </div>
-                    <div className={"Notifaction-home2"}>
-                        <InfoGeneral></InfoGeneral>
-                    </div>
+                    <Info></Info>
+                </div>
+
+                <div className={"Notifaction-home2"}>
+                    <InfoGeneral></InfoGeneral>
+                </div>
+
                 <div className={"map-carteint"}>
-                <Carte></Carte>
-                 </div>
+                    <Carte></Carte>
+                </div>
+                
                 <Footer></Footer>
             </div>
     
