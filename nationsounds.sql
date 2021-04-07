@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 31 mars 2021 à 13:22
+-- Généré le : mar. 06 avr. 2021 à 19:46
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `evenement` (
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `img` varchar(555) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `evenement`
@@ -110,7 +110,9 @@ CREATE TABLE IF NOT EXISTS `evenement` (
 INSERT INTO `evenement` (`id`, `nom`, `type`, `date`, `horaire_debut`, `horaire_fin`, `description`, `img`) VALUES
 (1, 'Concert David Guetta', 'concert', '2021-07-09 18:30:00', '18:30:00', '20:30:00', NULL, 'https://www.francetvinfo.fr/pictures/1ckFwvBEjGUpe-8lgteqiqdxe5M/752x423/2020/12/30/phpwUu3WJ.jpg'),
 (2, 'Concert Nekfeu', 'concert', '2021-07-09 18:30:00', '20:45:00', '22:45:00', NULL, 'https://img.20mn.fr/vmv6LIy_QWO8Qx-mYP_Oyg/830x532_nekfeu-rappeurs-crew-cut-killer-giorgio-dinos-participeront-concert-hip-hop-convict-20-fevrier-2018.jpg'),
-(3, 'Concert Black Eyed Peas', 'concert', '2021-07-10 15:08:03', '22:00:00', '00:00:00', NULL, 'https://static.lexpress.fr/medias_1434/w_640,h_358,c_fill,g_center/v1375968534/les-black-eyed-peas-de-g-a-d-fergie-apl-de-ap-taboo-et-will-i-am-sur-la-scene-du-stade-de-france-le-22-juin-2011_734262.jpg');
+(3, 'Concert Black Eyed Peas', 'concert', '2021-07-10 15:08:03', '22:00:00', '00:00:00', NULL, 'https://static.lexpress.fr/medias_1434/w_640,h_358,c_fill,g_center/v1375968534/les-black-eyed-peas-de-g-a-d-fergie-apl-de-ap-taboo-et-will-i-am-sur-la-scene-du-stade-de-france-le-22-juin-2011_734262.jpg'),
+(4, 'Dédicace Black Eyed Peas', 'dedicace', '2021-07-15 20:52:38', '20:52:31', '25:52:38', NULL, 'https://lh3.googleusercontent.com/proxy/r_bujZ2tkzVIhjMk-7O_pH4N9NEym6LapU_Ol6vLFdo2TFcWySQpO33zUe4b_NY6awE2SsMcawRhFkmrYm0Gf7bWuxfFeyXys60Ghw0qgu9kXBl6LxcpKxz18040LxCQ1Ssl77BHDYVSmDI'),
+(5, 'Dédicace David Guetta', 'dedicace', '2021-04-13 21:09:37', '13:09:37', '16:09:37', NULL, 'https://lemondenumerique-media.ouest-france.fr/wp-content/uploads/2011/12/Beats%20mixr%20David%20Guetta%20fnac%20champs%20elysees%20(3).jpg');
 
 -- --------------------------------------------------------
 
@@ -134,7 +136,9 @@ CREATE TABLE IF NOT EXISTS `evenement_artiste` (
 INSERT INTO `evenement_artiste` (`evenement_id`, `artiste_id`) VALUES
 (1, 3),
 (2, 3),
-(3, 4);
+(3, 4),
+(4, 4),
+(5, 3);
 
 -- --------------------------------------------------------
 
@@ -180,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `info` (
 
 INSERT INTO `info` (`id`, `titre`, `description`, `type`) VALUES
 (1, 'Jeu du sosie', 'Un jeu du sosie est organisé par notre partenaire coca-cola, tentez de gagner un autographe signé et une photo avec Dua Lipa.', 'generale'),
-(2, 'Météo estivale', 'De grosses températures sont attendues ce week-end, pensez à vous protéger et à boire régulièrement.', 'urgente'),
+(2, 'Météo estivale', 'De hautes températures sont attendues ce week-end, pensez à vous protéger et à boire régulièrement.', 'urgente'),
 (3, 'Objet perdu', 'Si vous avez perdu ou trouver un objet, rendez-vous dans les points de collecte affichés sur votre carte.', 'urgente'),
 (4, 'Invité surprise', 'Nekfeu va bientôt monter sur scène, mais il a un invité surprise à vous présenter. Ne ratez pas ce moment !', 'generale');
 
@@ -198,14 +202,6 @@ CREATE TABLE IF NOT EXISTS `notification` (
   `titre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `notification`
---
-
-INSERT INTO `notification` (`id`, `date`, `type`, `titre`) VALUES
-(1, '2021-03-29', 'general', 'info1111'),
-(2, '2021-03-17', 'urgente', 'Attention il y a de la pluie');
 
 -- --------------------------------------------------------
 
