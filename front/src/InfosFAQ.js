@@ -63,27 +63,25 @@ const InfosFAQ = () => {
             <div className={"contenu"}>
                 <Menu></Menu>
 
-                    <div className={"Notifaction-home"}>
-                        <Info></Info>
-                    </div>
-                    <div className={"Notifaction-home2"}>
-                        <InfoGeneral></InfoGeneral>
-                    </div>
+                <div className={"Notifaction-home"}>
+                    <Info></Info>
+                </div>
+                <div className={"Notifaction-home2"}>
+                    <InfoGeneral></InfoGeneral>
+                </div>
 
                 <div className={"blockSwitchProgramme"}>
                 <Tabs>
                     <div title="Informations">
-                            <ListInfo></ListInfo>
+                        <ListInfo></ListInfo>
                     </div>
 
                     <div title="Foire aux Questions" > 
                         <Faq></Faq>
                     </div>
-    
-                    
                 </Tabs>
-
                 </div>
+                
                 <Footer></Footer>
             </div>
         )
