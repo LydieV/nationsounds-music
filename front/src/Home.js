@@ -46,7 +46,7 @@ function Home() {
                 <h1 className={"h1m"}>Programmes concerts</h1>
                 <h2 className={"h-textbillet"}>Toujours pas de billets ?</h2>
                 
-                <a href='./billetterie'>
+                <a href='https://www.leclercbilletterie.com/fr/resultat?ipSearch=the+weeknd'>
                  <button className={"btn-billet"}>Accéder à la <br></br>billeterie</button>
                 </a>
                 
@@ -123,7 +123,7 @@ function Home() {
                 </div>
                 <h1 className={"h1m"}>Programmes concerts</h1>
                 <h2 className={"h-textbillet"}>Toujours pas de billets ?</h2>
-                <a href='./billetterie'>
+                <a href='https://www.leclercbilletterie.com/fr/resultat?ipSearch=the+weeknd'>
                  <button className={"btn-billet"}>Accéder à la <br></br>billeterie</button>
                 </a>
                 <h1 className={"h1m h-plan"}>Découvrez le plan</h1>
