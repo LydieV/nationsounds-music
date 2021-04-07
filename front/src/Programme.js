@@ -67,40 +67,75 @@ const Programme = () => {
                             
                             <Tabs>
                                 <div title="Concerts">
-                                    <div class="cardsProgramme">
+                                    <div className={"cardsProgramme"}>
+                                        {evenementDatas.map(evenementData =>
+                                            <div>
+                                                {
+                                                    evenementData.type === "concert" ?
+                                                        <div className={"cardProgramme"}>
+                                                            <div className={"imgCard"}>
+                                                                <img src={evenementData.img} alt={'imgEvenement'+evenementData.id} />
+                                                            </div>
+                                                            <div className={"contenuCard"}>
+                                                                <p className={"horaireCard"}><Time value={evenementData.horaireDebut} format="HH:MM"/></p>
+                                                                    {artisteDatas.map(artisteData =>
+                                                                        <div>
+                                                                            {
+                                                                                evenementData.artiste[0] === "/api/artistes/"+artisteData.id ?
+                                                                                    <p className={"nomCard"}> {artisteData.name}</p>
+                                                                                : ''
+                                                                            }
+                                                                        </div>
+                                                                        )}
+                                                    
+                                                            </div>
 
-                                    {evenementDatas.map(evenementData =>
-                                        <div className={"cardProgramme"}>
-                                            <div className={"imgCard"}>
-                                            <img src={evenementData.img} alt={'imgEvenement'+evenementData.id} />
-                                            </div>
-                                            <div className={"contenuCard"}>
-                                                <p className={"horaireCard"}><Time value={evenementData.horaireDebut} format="YYYY/MM/DD"/> </p>
-                                                {artisteDatas.map(artisteData =>
-                                                    <div>
-                                                        {
-                                                            evenementData.artiste[0] === "/api/artistes/"+artisteData.id ?
-                                                                <p className={"nomCard"}> {artisteData.name}</p>
-                                                            : ''
-                                                        }
-                                                    </div>
-                                                    )}
+                                                        </div>
+                                                            
+                                                    : ''
+                                                }
                                                 
                                             </div>
-                                        </div>
-                                    )}
-                                               
-                                    </div>
-                                    
-            
+                                        )}
+                                                
+                                    </div>                
                                 </div>
+
                                 <div title="Dédicaces">
-                                    <div>
-                                        <p> dédicace</p>
-                                    </div>
+                                <div className={"cardsProgramme"}>
+                                        {evenementDatas.map(evenementData =>
+                                            <div>
+                                                {
+                                                    evenementData.type === "dedicace" ?
+                                                        <div className={"cardProgramme"}>
+                                                            <div className={"imgCard"}>
+                                                                <img src={evenementData.img} alt={'imgEvenement'+evenementData.id} />
+                                                            </div>
+                                                            <div className={"contenuCard"}>
+                                                                <p className={"horaireCard"}><Time value={evenementData.horaireDebut} format="HH:MM"/></p>
+                                                                    {artisteDatas.map(artisteData =>
+                                                                        <div>
+                                                                            {
+                                                                                evenementData.artiste[0] === "/api/artistes/"+artisteData.id ?
+                                                                                    <p className={"nomCard"}> {artisteData.name}</p>
+                                                                                : ''
+                                                                            }
+                                                                        </div>
+                                                                        )}
+                                                    
+                                                            </div>
+
+                                                        </div>
+                                                            
+                                                    : ''
+                                                }
+                                                
+                                            </div>
+                                        )}
+                                                
+                                    </div>          
                                 </div>
                             </Tabs>
-            
                         </div>
                     </div>
                 )
