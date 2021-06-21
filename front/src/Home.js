@@ -104,13 +104,15 @@ function Home() {
             <div className={"homepage"}>
             <Menu></Menu>
                 <div className={"Notifaction-home"}>
-                <Info></Info>
+                    <Info></Info>
                 </div>
                 <div className={"Notifaction-home2"}>
-                <InfoGeneral></InfoGeneral>
+                    <InfoGeneral></InfoGeneral>
                 </div>
 
+                
                 <div className={"programme-concert"}>
+                
                 <a href='./programme'>
                  <button className={"btn-programme1"}><p>THE</p><p><br></br> WEEKND</p></button>
                 </a>
@@ -122,11 +124,14 @@ function Home() {
                 </a>
                 </div>
                 <h1 className={"h1m"}>Programmes concerts</h1>
+                
                 <h2 className={"h-textbillet"}>Toujours pas de billets ?</h2>
+                
                 <a target="_blank" href='https://www.leclercbilletterie.com/fr/resultat?ipSearch=the+weeknd'>
                  <button className={"btn-billet"}>Accéder à la <br></br>billeterie</button>
                 </a>
                 <h1 className={"h1m h-plan"}>Découvrez le plan</h1>
+
                 <div className={"map-home"}>
                 <Carte></Carte>
                 </div>

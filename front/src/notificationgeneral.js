@@ -16,7 +16,7 @@ export default function InfoGeneral()  {
     return (
         <div> 
             <div className={"conteneur-general"}>
-                {infoDatas.map(infoData =>
+                {infoDatas.slice(0).reverse().map(infoData =>
                     <div>
                         {
                             infoData.type === "generale" ?
@@ -33,7 +33,5 @@ export default function InfoGeneral()  {
                 )}
             </div>
         </div>
-                
     )
-
 }

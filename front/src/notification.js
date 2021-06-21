@@ -17,7 +17,7 @@ export default function Info()  {
     return (
         <div> 
             <div className={"conteneur-notif"}>
-                {infoDatas.map(infoData =>
+                {infoDatas.slice(0).reverse().map(infoData =>
                     <div>
                         {
                             infoData.type === "urgente" ?
